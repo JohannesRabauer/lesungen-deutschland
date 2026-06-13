@@ -1,397 +1,36 @@
 [
   {
-    "id": "mock-47",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-06-19T21:32:54.180Z",
-    "location": {
-      "name": "Thalia Buchhandlung Frankfurt",
-      "address": "Musterstraße 73, Frankfurt",
-      "lat": 50.11752702636203,
-      "lng": 8.659541179384597
-    },
-    "price": {
-      "amount": 15,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-14",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-06-22T12:01:01.006Z",
-    "location": {
-      "name": "Volkshochschule Köln",
-      "address": "Musterstraße 2, Köln",
-      "lat": 50.9466857676382,
-      "lng": 6.942159358372825
-    },
-    "price": {
-      "amount": 25,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-48",
-    "title": "Lesung mit Saša Stanišić",
-    "author": "Saša Stanišić",
-    "date": "2026-06-25T19:23:45.597Z",
-    "location": {
-      "name": "Literaturhaus Köln",
-      "address": "Musterstraße 24, Köln",
-      "lat": 50.960054676554286,
-      "lng": 6.980947713638985
-    },
-    "price": {
-      "amount": 31,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Saša Stanišić live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-3",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-06-26T21:16:51.611Z",
-    "location": {
-      "name": "Stadtbibliothek Berlin",
-      "address": "Musterstraße 87, Berlin",
-      "lat": 52.49790646743289,
-      "lng": 13.416238691915254
-    },
-    "price": {
-      "amount": 9,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-1",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-06-29T03:24:42.435Z",
-    "location": {
-      "name": "Volkshochschule München",
-      "address": "Musterstraße 38, München",
-      "lat": 48.15037634148744,
-      "lng": 11.569896575490896
-    },
-    "price": {
-      "amount": 33,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in München. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-7",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-06-29T12:29:21.592Z",
-    "location": {
-      "name": "Literaturhaus Berlin",
-      "address": "Musterstraße 88, Berlin",
-      "lat": 52.515470862087696,
-      "lng": 13.389884011210555
-    },
-    "price": {
-      "amount": 25,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-38",
-    "title": "Lesung mit Sebastian Fitzek",
-    "author": "Sebastian Fitzek",
-    "date": "2026-06-29T21:40:28.950Z",
-    "location": {
-      "name": "Stadtbibliothek Hamburg",
-      "address": "Musterstraße 74, Hamburg",
-      "lat": 53.560466337480946,
-      "lng": 9.99365877028241
-    },
-    "price": {
-      "amount": 9,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Sebastian Fitzek live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-9",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-06-30T20:23:14.720Z",
-    "location": {
-      "name": "Volkshochschule Hamburg",
-      "address": "Musterstraße 80, Hamburg",
-      "lat": 53.55735437247719,
-      "lng": 10.007071363703716
-    },
-    "price": {
-      "amount": 11,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-8",
-    "title": "Lesung mit Marc-Uwe Kling",
-    "author": "Marc-Uwe Kling",
-    "date": "2026-07-04T07:22:24.967Z",
-    "location": {
-      "name": "Thalia Buchhandlung Köln",
-      "address": "Musterstraße 13, Köln",
-      "lat": 50.95831589469196,
-      "lng": 6.958974319231113
-    },
-    "price": {
-      "amount": 33,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Marc-Uwe Kling live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-16",
-    "title": "Lesung mit Sebastian Fitzek",
-    "author": "Sebastian Fitzek",
-    "date": "2026-07-05T06:44:10.775Z",
-    "location": {
-      "name": "Thalia Buchhandlung Dresden",
-      "address": "Musterstraße 65, Dresden",
-      "lat": 51.044231737191396,
-      "lng": 13.730816536881186
-    },
-    "price": {
-      "amount": 24,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Sebastian Fitzek live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-46",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-07-06T16:50:56.909Z",
-    "location": {
-      "name": "Stadtbibliothek Köln",
-      "address": "Musterstraße 20, Köln",
-      "lat": 50.94702417441673,
-      "lng": 6.957754422397807
-    },
-    "price": {
-      "amount": 23,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-42",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-07-06T21:38:37.857Z",
-    "location": {
-      "name": "Thalia Buchhandlung Hamburg",
-      "address": "Musterstraße 98, Hamburg",
-      "lat": 53.55568266118768,
-      "lng": 9.994708232379377
-    },
-    "price": {
-      "amount": 25,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Cornelia Funke live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-6",
-    "title": "Lesung mit Saša Stanišić",
-    "author": "Saša Stanišić",
-    "date": "2026-07-12T19:42:06.833Z",
-    "location": {
-      "name": "Kulturhaus Stuttgart",
-      "address": "Musterstraße 38, Stuttgart",
-      "lat": 48.76756813693092,
-      "lng": 9.161062939446742
-    },
-    "price": {
-      "amount": 27,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Saša Stanišić live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-5",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-07-13T10:53:35.586Z",
-    "location": {
-      "name": "Thalia Buchhandlung Berlin",
-      "address": "Musterstraße 9, Berlin",
-      "lat": 52.519156743077566,
-      "lng": 13.401397759333006
-    },
-    "price": {
-      "amount": 15,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-12",
-    "title": "Lesung mit Ferdinand von Schirach",
-    "author": "Ferdinand von Schirach",
-    "date": "2026-07-15T08:22:34.611Z",
-    "location": {
-      "name": "Literaturhaus Dresden",
-      "address": "Musterstraße 91, Dresden",
-      "lat": 51.03224869360979,
-      "lng": 13.736605426747909
-    },
-    "price": {
-      "amount": 13,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Ferdinand von Schirach live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-45",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-07-17T09:00:07.127Z",
-    "location": {
-      "name": "Volkshochschule Stuttgart",
-      "address": "Musterstraße 67, Stuttgart",
-      "lat": 48.78277722177385,
-      "lng": 9.19435462972529
-    },
-    "price": {
-      "amount": 33,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-13",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-07-18T01:15:48.917Z",
-    "location": {
-      "name": "Stadtbibliothek Frankfurt",
-      "address": "Musterstraße 61, Frankfurt",
-      "lat": 50.12893979844338,
-      "lng": 8.705088558754973
-    },
-    "price": {
-      "amount": 10,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Cornelia Funke live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
     "id": "mock-35",
-    "title": "Lesung mit Marc-Uwe Kling",
-    "author": "Marc-Uwe Kling",
-    "date": "2026-07-18T10:07:12.197Z",
+    "title": "Lesung mit Cornelia Funke",
+    "author": "Cornelia Funke",
+    "date": "2026-06-13T11:39:03.824Z",
     "location": {
-      "name": "Volkshochschule Köln",
-      "address": "Musterstraße 43, Köln",
-      "lat": 50.93485107916211,
-      "lng": 6.960220635939587
+      "name": "Literaturhaus Leipzig",
+      "address": "Musterstraße 35, Leipzig",
+      "lat": 51.3403598416105,
+      "lng": 12.37147744407235
     },
     "price": {
-      "amount": 5,
+      "amount": 33,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Marc-Uwe Kling live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Cornelia Funke live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-4",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-07-18T14:50:47.913Z",
-    "location": {
-      "name": "Thalia Buchhandlung Frankfurt",
-      "address": "Musterstraße 13, Frankfurt",
-      "lat": 50.12300050062238,
-      "lng": 8.679730683220786
-    },
-    "price": {
-      "amount": 20,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-32",
-    "title": "Lesung mit Saša Stanišić",
-    "author": "Saša Stanišić",
-    "date": "2026-07-21T13:29:44.295Z",
-    "location": {
-      "name": "Volkshochschule Stuttgart",
-      "address": "Musterstraße 79, Stuttgart",
-      "lat": 48.78738376788056,
-      "lng": 9.2045605219023
-    },
-    "price": {
-      "amount": 31,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Saša Stanišić live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-22",
+    "id": "mock-26",
     "title": "Lesung mit Ferdinand von Schirach",
     "author": "Ferdinand von Schirach",
-    "date": "2026-07-24T13:54:44.835Z",
+    "date": "2026-06-15T11:00:15.072Z",
     "location": {
-      "name": "Literaturhaus München",
-      "address": "Musterstraße 85, München",
-      "lat": 48.13744579786623,
-      "lng": 11.600668388073709
+      "name": "Stadtbibliothek München",
+      "address": "Musterstraße 73, München",
+      "lat": 48.116432180762835,
+      "lng": 11.577235784386026
     },
     "price": {
-      "amount": 16,
+      "amount": 28,
       "currency": "EUR"
     },
     "description": "Erleben Sie Ferdinand von Schirach live in München. Eine spannende Lesung aus dem neuesten Werk.",
@@ -399,18 +38,455 @@
     "source": "Mock Generator"
   },
   {
-    "id": "mock-34",
+    "id": "mock-45",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-06-15T15:23:28.311Z",
+    "location": {
+      "name": "Kulturhaus Berlin",
+      "address": "Musterstraße 43, Berlin",
+      "lat": 52.51490370175949,
+      "lng": 13.42170712714997
+    },
+    "price": {
+      "amount": 33,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Sebastian Fitzek live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-29",
     "title": "Lesung mit Ferdinand von Schirach",
     "author": "Ferdinand von Schirach",
-    "date": "2026-07-27T09:19:51.559Z",
+    "date": "2026-06-16T07:01:27.359Z",
+    "location": {
+      "name": "Kulturhaus Leipzig",
+      "address": "Musterstraße 57, Leipzig",
+      "lat": 51.35888896982494,
+      "lng": 12.367289542577344
+    },
+    "price": {
+      "amount": 14,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Ferdinand von Schirach live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-11",
+    "title": "Lesung mit Herta Müller",
+    "author": "Herta Müller",
+    "date": "2026-06-16T18:59:49.877Z",
+    "location": {
+      "name": "Literaturhaus Berlin",
+      "address": "Musterstraße 9, Berlin",
+      "lat": 52.49928773174003,
+      "lng": 13.411311198870552
+    },
+    "price": {
+      "amount": 33,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Herta Müller live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-22",
+    "title": "Lesung mit Herta Müller",
+    "author": "Herta Müller",
+    "date": "2026-06-16T23:10:35.894Z",
+    "location": {
+      "name": "Thalia Buchhandlung Leipzig",
+      "address": "Musterstraße 56, Leipzig",
+      "lat": 51.33901881318421,
+      "lng": 12.368554486929364
+    },
+    "price": {
+      "amount": 15,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Herta Müller live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-33",
+    "title": "Lesung mit Saša Stanišić",
+    "author": "Saša Stanišić",
+    "date": "2026-06-21T23:46:17.015Z",
+    "location": {
+      "name": "Volkshochschule Dresden",
+      "address": "Musterstraße 66, Dresden",
+      "lat": 51.043236988776286,
+      "lng": 13.759402310611259
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Saša Stanišić live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-36",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-06-22T06:06:07.343Z",
     "location": {
       "name": "Volkshochschule Berlin",
-      "address": "Musterstraße 84, Berlin",
-      "lat": 52.52536914356637,
-      "lng": 13.421098329984908
+      "address": "Musterstraße 98, Berlin",
+      "lat": 52.502539233984514,
+      "lng": 13.392871197990653
+    },
+    "price": {
+      "amount": 22,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Juli Zeh live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-24",
+    "title": "Lesung mit Daniel Kehlmann",
+    "author": "Daniel Kehlmann",
+    "date": "2026-06-25T18:22:39.950Z",
+    "location": {
+      "name": "Kulturhaus Hamburg",
+      "address": "Musterstraße 22, Hamburg",
+      "lat": 53.547539081609266,
+      "lng": 10.006171027831178
     },
     "price": {
       "amount": 20,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Daniel Kehlmann live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-12",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-07-02T03:06:47.538Z",
+    "location": {
+      "name": "Volkshochschule Dresden",
+      "address": "Musterstraße 74, Dresden",
+      "lat": 51.069141513938284,
+      "lng": 13.735901313369965
+    },
+    "price": {
+      "amount": 5,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Juli Zeh live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-38",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-07-04T17:48:10.415Z",
+    "location": {
+      "name": "Thalia Buchhandlung München",
+      "address": "Musterstraße 35, München",
+      "lat": 48.14008212480528,
+      "lng": 11.584755279978166
+    },
+    "price": {
+      "amount": 8,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Sebastian Fitzek live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-5",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-07-04T21:38:25.739Z",
+    "location": {
+      "name": "Literaturhaus Hamburg",
+      "address": "Musterstraße 39, Hamburg",
+      "lat": 53.540436132943256,
+      "lng": 9.998233750556993
+    },
+    "price": {
+      "amount": 21,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Juli Zeh live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-17",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-07-06T20:52:34.216Z",
+    "location": {
+      "name": "Kulturhaus Leipzig",
+      "address": "Musterstraße 16, Leipzig",
+      "lat": 51.34678116482545,
+      "lng": 12.397434723816039
+    },
+    "price": {
+      "amount": 18,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Ferdinand von Schirach live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-18",
+    "title": "Lesung mit Daniel Kehlmann",
+    "author": "Daniel Kehlmann",
+    "date": "2026-07-09T07:14:21.827Z",
+    "location": {
+      "name": "Literaturhaus München",
+      "address": "Musterstraße 23, München",
+      "lat": 48.122390716360414,
+      "lng": 11.5601602438184
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Daniel Kehlmann live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-14",
+    "title": "Lesung mit Daniel Kehlmann",
+    "author": "Daniel Kehlmann",
+    "date": "2026-07-11T21:57:26.643Z",
+    "location": {
+      "name": "Stadtbibliothek Hamburg",
+      "address": "Musterstraße 43, Hamburg",
+      "lat": 53.56453529228539,
+      "lng": 9.98785826502003
+    },
+    "price": {
+      "amount": 16,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Daniel Kehlmann live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-13",
+    "title": "Lesung mit Daniel Kehlmann",
+    "author": "Daniel Kehlmann",
+    "date": "2026-07-11T23:53:49.518Z",
+    "location": {
+      "name": "Kulturhaus Stuttgart",
+      "address": "Musterstraße 77, Stuttgart",
+      "lat": 48.78829376069997,
+      "lng": 9.163184242545611
+    },
+    "price": {
+      "amount": 8,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Daniel Kehlmann live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-32",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-07-12T10:15:09.937Z",
+    "location": {
+      "name": "Volkshochschule Hamburg",
+      "address": "Musterstraße 79, Hamburg",
+      "lat": 53.553435878524034,
+      "lng": 10.006171001363887
+    },
+    "price": {
+      "amount": 28,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Sebastian Fitzek live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-31",
+    "title": "Lesung mit Marc-Uwe Kling",
+    "author": "Marc-Uwe Kling",
+    "date": "2026-07-12T11:42:49.114Z",
+    "location": {
+      "name": "Thalia Buchhandlung Stuttgart",
+      "address": "Musterstraße 56, Stuttgart",
+      "lat": 48.77731763323177,
+      "lng": 9.169688165426535
+    },
+    "price": {
+      "amount": 8,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Marc-Uwe Kling live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-43",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-07-14T10:24:18.702Z",
+    "location": {
+      "name": "Kulturhaus Frankfurt",
+      "address": "Musterstraße 19, Frankfurt",
+      "lat": 50.10578598352319,
+      "lng": 8.698701877174344
+    },
+    "price": {
+      "amount": 12,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Juli Zeh live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-15",
+    "title": "Lesung mit Herta Müller",
+    "author": "Herta Müller",
+    "date": "2026-07-15T05:30:47.912Z",
+    "location": {
+      "name": "Literaturhaus Köln",
+      "address": "Musterstraße 20, Köln",
+      "lat": 50.923005647997705,
+      "lng": 6.940246354706918
+    },
+    "price": {
+      "amount": 9,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Herta Müller live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-7",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-07-17T18:08:48.793Z",
+    "location": {
+      "name": "Stadtbibliothek Frankfurt",
+      "address": "Musterstraße 32, Frankfurt",
+      "lat": 50.09638896691007,
+      "lng": 8.69340059697901
+    },
+    "price": {
+      "amount": 6,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Ferdinand von Schirach live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-3",
+    "title": "Lesung mit Saša Stanišić",
+    "author": "Saša Stanišić",
+    "date": "2026-07-17T18:13:17.973Z",
+    "location": {
+      "name": "Thalia Buchhandlung Dresden",
+      "address": "Musterstraße 3, Dresden",
+      "lat": 51.062343830450395,
+      "lng": 13.740126154507083
+    },
+    "price": {
+      "amount": 29,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Saša Stanišić live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-46",
+    "title": "Lesung mit Marc-Uwe Kling",
+    "author": "Marc-Uwe Kling",
+    "date": "2026-07-17T23:38:40.156Z",
+    "location": {
+      "name": "Thalia Buchhandlung Hamburg",
+      "address": "Musterstraße 14, Hamburg",
+      "lat": 53.55146481006949,
+      "lng": 9.999301204373833
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Marc-Uwe Kling live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-10",
+    "title": "Lesung mit Daniel Kehlmann",
+    "author": "Daniel Kehlmann",
+    "date": "2026-07-20T21:16:06.096Z",
+    "location": {
+      "name": "Stadtbibliothek Köln",
+      "address": "Musterstraße 37, Köln",
+      "lat": 50.927698251903486,
+      "lng": 6.981635908845381
+    },
+    "price": {
+      "amount": 14,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Daniel Kehlmann live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-1",
+    "title": "Lesung mit Herta Müller",
+    "author": "Herta Müller",
+    "date": "2026-07-23T17:26:47.720Z",
+    "location": {
+      "name": "Volkshochschule München",
+      "address": "Musterstraße 0, München",
+      "lat": 48.14826767239358,
+      "lng": 11.580123779393709
+    },
+    "price": {
+      "amount": 6,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Herta Müller live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-19",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-07-23T19:50:01.562Z",
+    "location": {
+      "name": "Volkshochschule Berlin",
+      "address": "Musterstraße 18, Berlin",
+      "lat": 52.529377592741525,
+      "lng": 13.401064329665418
+    },
+    "price": {
+      "amount": 8,
       "currency": "EUR"
     },
     "description": "Erleben Sie Ferdinand von Schirach live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
@@ -418,53 +494,129 @@
     "source": "Mock Generator"
   },
   {
-    "id": "mock-44",
+    "id": "mock-40",
     "title": "Lesung mit Daniel Kehlmann",
     "author": "Daniel Kehlmann",
-    "date": "2026-07-28T15:22:26.716Z",
+    "date": "2026-07-27T09:01:10.804Z",
     "location": {
-      "name": "Volkshochschule Berlin",
-      "address": "Musterstraße 8, Berlin",
-      "lat": 52.519892201237305,
-      "lng": 13.40027856612529
+      "name": "Kulturhaus Dresden",
+      "address": "Musterstraße 53, Dresden",
+      "lat": 51.053683500074264,
+      "lng": 13.714779851617159
     },
     "price": {
-      "amount": 11,
+      "amount": 27,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Daniel Kehlmann live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Daniel Kehlmann live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-29",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-07-28T17:23:02.653Z",
+    "id": "mock-16",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-07-27T15:50:40.931Z",
     "location": {
-      "name": "Stadtbibliothek Dresden",
-      "address": "Musterstraße 52, Dresden",
-      "lat": 51.03426029643911,
-      "lng": 13.722759882505999
+      "name": "Volkshochschule Stuttgart",
+      "address": "Musterstraße 6, Stuttgart",
+      "lat": 48.792154390745324,
+      "lng": 9.163686014079376
     },
     "price": {
-      "amount": 31,
+      "amount": 9,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Cornelia Funke live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Juli Zeh live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-49",
+    "id": "mock-25",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-07-27T21:44:18.131Z",
+    "location": {
+      "name": "Literaturhaus Leipzig",
+      "address": "Musterstraße 63, Leipzig",
+      "lat": 51.35331319712786,
+      "lng": 12.388963899628203
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Sebastian Fitzek live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-48",
+    "title": "Lesung mit Herta Müller",
+    "author": "Herta Müller",
+    "date": "2026-07-29T02:46:28.600Z",
+    "location": {
+      "name": "Volkshochschule Dresden",
+      "address": "Musterstraße 58, Dresden",
+      "lat": 51.02820024468598,
+      "lng": 13.734806145639771
+    },
+    "price": {
+      "amount": 28,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Herta Müller live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-39",
     "title": "Lesung mit Ferdinand von Schirach",
     "author": "Ferdinand von Schirach",
-    "date": "2026-07-30T01:30:14.650Z",
+    "date": "2026-07-30T13:25:42.975Z",
+    "location": {
+      "name": "Volkshochschule Leipzig",
+      "address": "Musterstraße 70, Leipzig",
+      "lat": 51.340498451339855,
+      "lng": 12.385700390312092
+    },
+    "price": {
+      "amount": 15,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Ferdinand von Schirach live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-20",
+    "title": "Lesung mit Cornelia Funke",
+    "author": "Cornelia Funke",
+    "date": "2026-08-01T02:30:30.553Z",
+    "location": {
+      "name": "Stadtbibliothek Berlin",
+      "address": "Musterstraße 92, Berlin",
+      "lat": 52.4997778201137,
+      "lng": 13.389151793791381
+    },
+    "price": {
+      "amount": 22,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Cornelia Funke live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-6",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-08-02T19:27:22.120Z",
     "location": {
       "name": "Stadtbibliothek Hamburg",
-      "address": "Musterstraße 81, Hamburg",
-      "lat": 53.530714285189134,
-      "lng": 10.009189678207514
+      "address": "Musterstraße 27, Hamburg",
+      "lat": 53.532042693410745,
+      "lng": 9.976098314510637
     },
     "price": {
       "amount": 30,
@@ -475,227 +627,37 @@
     "source": "Mock Generator"
   },
   {
-    "id": "mock-10",
-    "title": "Lesung mit Marc-Uwe Kling",
-    "author": "Marc-Uwe Kling",
-    "date": "2026-07-31T04:09:29.103Z",
-    "location": {
-      "name": "Literaturhaus Stuttgart",
-      "address": "Musterstraße 41, Stuttgart",
-      "lat": 48.755962542949554,
-      "lng": 9.191647494811603
-    },
-    "price": {
-      "amount": 25,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Marc-Uwe Kling live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-40",
+    "id": "mock-34",
     "title": "Lesung mit Saša Stanišić",
     "author": "Saša Stanišić",
-    "date": "2026-07-31T14:42:48.054Z",
+    "date": "2026-08-05T16:58:11.836Z",
     "location": {
-      "name": "Kulturhaus München",
-      "address": "Musterstraße 84, München",
-      "lat": 48.11011012199244,
-      "lng": 11.575375115496517
+      "name": "Stadtbibliothek Stuttgart",
+      "address": "Musterstraße 74, Stuttgart",
+      "lat": 48.77489734697534,
+      "lng": 9.178881766219273
     },
     "price": {
-      "amount": 21,
+      "amount": 14,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Saša Stanišić live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Saša Stanišić live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-30",
+    "id": "mock-49",
     "title": "Lesung mit Daniel Kehlmann",
     "author": "Daniel Kehlmann",
-    "date": "2026-08-05T17:58:47.051Z",
-    "location": {
-      "name": "Thalia Buchhandlung München",
-      "address": "Musterstraße 0, München",
-      "lat": 48.15058107511748,
-      "lng": 11.59024728695826
-    },
-    "price": {
-      "amount": 21,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Daniel Kehlmann live in München. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-19",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-08-05T18:35:19.115Z",
-    "location": {
-      "name": "Thalia Buchhandlung Hamburg",
-      "address": "Musterstraße 91, Hamburg",
-      "lat": 53.56204637677737,
-      "lng": 10.013230888943058
-    },
-    "price": {
-      "amount": 27,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-17",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-08-06T17:37:48.439Z",
-    "location": {
-      "name": "Stadtbibliothek München",
-      "address": "Musterstraße 5, München",
-      "lat": 48.131244945747,
-      "lng": 11.55883206386691
-    },
-    "price": {
-      "amount": 8,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in München. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-39",
-    "title": "Lesung mit Saša Stanišić",
-    "author": "Saša Stanišić",
-    "date": "2026-08-07T11:45:10.705Z",
-    "location": {
-      "name": "Kulturhaus Leipzig",
-      "address": "Musterstraße 20, Leipzig",
-      "lat": 51.329021783694515,
-      "lng": 12.385809122195232
-    },
-    "price": {
-      "amount": 27,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Saša Stanišić live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-23",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-08-08T14:19:58.981Z",
-    "location": {
-      "name": "Thalia Buchhandlung Berlin",
-      "address": "Musterstraße 55, Berlin",
-      "lat": 52.54242718620709,
-      "lng": 13.417259370778066
-    },
-    "price": {
-      "amount": 32,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-31",
-    "title": "Lesung mit Ferdinand von Schirach",
-    "author": "Ferdinand von Schirach",
-    "date": "2026-08-09T20:01:25.414Z",
+    "date": "2026-08-06T04:59:38.407Z",
     "location": {
       "name": "Thalia Buchhandlung Köln",
-      "address": "Musterstraße 36, Köln",
-      "lat": 50.95761925115071,
-      "lng": 6.951787383680143
+      "address": "Musterstraße 27, Köln",
+      "lat": 50.94167816148429,
+      "lng": 6.948182957231979
     },
     "price": {
-      "amount": 34,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Ferdinand von Schirach live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-33",
-    "title": "Lesung mit Ferdinand von Schirach",
-    "author": "Ferdinand von Schirach",
-    "date": "2026-08-10T04:15:02.122Z",
-    "location": {
-      "name": "Stadtbibliothek München",
-      "address": "Musterstraße 47, München",
-      "lat": 48.15179415496622,
-      "lng": 11.581980512523394
-    },
-    "price": {
-      "amount": 17,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Ferdinand von Schirach live in München. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-0",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-08-14T04:12:02.671Z",
-    "location": {
-      "name": "Literaturhaus Frankfurt",
-      "address": "Musterstraße 31, Frankfurt",
-      "lat": 50.08624709322736,
-      "lng": 8.697517637721473
-    },
-    "price": {
-      "amount": 11,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Cornelia Funke live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-28",
-    "title": "Lesung mit Ferdinand von Schirach",
-    "author": "Ferdinand von Schirach",
-    "date": "2026-08-14T21:07:12.964Z",
-    "location": {
-      "name": "Kulturhaus Köln",
-      "address": "Musterstraße 31, Köln",
-      "lat": 50.918934781674,
-      "lng": 6.984821949016683
-    },
-    "price": {
-      "amount": 19,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Ferdinand von Schirach live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-36",
-    "title": "Lesung mit Daniel Kehlmann",
-    "author": "Daniel Kehlmann",
-    "date": "2026-08-15T19:06:18.047Z",
-    "location": {
-      "name": "Kulturhaus Köln",
-      "address": "Musterstraße 88, Köln",
-      "lat": 50.943031412438806,
-      "lng": 6.965619884133544
-    },
-    "price": {
-      "amount": 15,
+      "amount": 13,
       "currency": "EUR"
     },
     "description": "Erleben Sie Daniel Kehlmann live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
@@ -703,132 +665,37 @@
     "source": "Mock Generator"
   },
   {
-    "id": "mock-27",
+    "id": "mock-23",
     "title": "Lesung mit Saša Stanišić",
     "author": "Saša Stanišić",
-    "date": "2026-08-16T20:05:59.626Z",
+    "date": "2026-08-06T07:27:51.725Z",
     "location": {
-      "name": "Volkshochschule Hamburg",
-      "address": "Musterstraße 21, Hamburg",
-      "lat": 53.526208053369984,
-      "lng": 9.995730560231454
-    },
-    "price": {
-      "amount": 12,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Saša Stanišić live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-18",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-08-24T02:30:56.298Z",
-    "location": {
-      "name": "Volkshochschule Köln",
-      "address": "Musterstraße 34, Köln",
-      "lat": 50.955207874351935,
-      "lng": 6.968636017276758
-    },
-    "price": {
-      "amount": 14,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-20",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-08-25T06:28:04.408Z",
-    "location": {
-      "name": "Kulturhaus Hamburg",
-      "address": "Musterstraße 28, Hamburg",
-      "lat": 53.560271235460064,
-      "lng": 10.017906124408531
+      "name": "Literaturhaus Stuttgart",
+      "address": "Musterstraße 34, Stuttgart",
+      "lat": 48.766912286749935,
+      "lng": 9.184611982883242
     },
     "price": {
       "amount": 8,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Herta Müller live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Saša Stanišić live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-26",
-    "title": "Lesung mit Daniel Kehlmann",
-    "author": "Daniel Kehlmann",
-    "date": "2026-08-25T23:19:34.030Z",
-    "location": {
-      "name": "Thalia Buchhandlung Leipzig",
-      "address": "Musterstraße 44, Leipzig",
-      "lat": 51.36183167762343,
-      "lng": 12.36063452836012
-    },
-    "price": {
-      "amount": 31,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Daniel Kehlmann live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-37",
-    "title": "Lesung mit Herta Müller",
-    "author": "Herta Müller",
-    "date": "2026-08-26T13:02:15.498Z",
-    "location": {
-      "name": "Stadtbibliothek Leipzig",
-      "address": "Musterstraße 73, Leipzig",
-      "lat": 51.361484199322554,
-      "lng": 12.379050531056091
-    },
-    "price": {
-      "amount": 8,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Herta Müller live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-41",
-    "title": "Lesung mit Marc-Uwe Kling",
-    "author": "Marc-Uwe Kling",
-    "date": "2026-08-26T21:45:54.689Z",
-    "location": {
-      "name": "Volkshochschule Köln",
-      "address": "Musterstraße 44, Köln",
-      "lat": 50.914057336600955,
-      "lng": 6.975229242369988
-    },
-    "price": {
-      "amount": 13,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Marc-Uwe Kling live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-11",
+    "id": "mock-21",
     "title": "Lesung mit Ferdinand von Schirach",
     "author": "Ferdinand von Schirach",
-    "date": "2026-08-27T08:41:15.265Z",
+    "date": "2026-08-06T13:19:15.876Z",
     "location": {
-      "name": "Stadtbibliothek Dresden",
-      "address": "Musterstraße 78, Dresden",
-      "lat": 51.04902641656043,
-      "lng": 13.752731897077108
+      "name": "Literaturhaus Dresden",
+      "address": "Musterstraße 75, Dresden",
+      "lat": 51.03492581825466,
+      "lng": 13.75484830638527
     },
     "price": {
-      "amount": 8,
+      "amount": 30,
       "currency": "EUR"
     },
     "description": "Erleben Sie Ferdinand von Schirach live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
@@ -836,94 +703,151 @@
     "source": "Mock Generator"
   },
   {
-    "id": "mock-25",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-08-29T15:45:18.828Z",
+    "id": "mock-28",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-08-07T14:10:03.320Z",
     "location": {
-      "name": "Stadtbibliothek Leipzig",
-      "address": "Musterstraße 14, Leipzig",
-      "lat": 51.31692538801909,
-      "lng": 12.389512781194545
+      "name": "Volkshochschule Hamburg",
+      "address": "Musterstraße 72, Hamburg",
+      "lat": 53.57042429982215,
+      "lng": 10.006871439531702
     },
     "price": {
-      "amount": 26,
+      "amount": 14,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Cornelia Funke live in Leipzig. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Ferdinand von Schirach live in Hamburg. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-2",
-    "title": "Lesung mit Juli Zeh",
-    "author": "Juli Zeh",
-    "date": "2026-09-01T20:32:41.050Z",
-    "location": {
-      "name": "Thalia Buchhandlung Dresden",
-      "address": "Musterstraße 59, Dresden",
-      "lat": 51.055571809900016,
-      "lng": 13.746522104507807
-    },
-    "price": {
-      "amount": 23,
-      "currency": "EUR"
-    },
-    "description": "Erleben Sie Juli Zeh live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
-    "url": "https://example.com",
-    "source": "Mock Generator"
-  },
-  {
-    "id": "mock-24",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-09-01T22:16:20.837Z",
+    "id": "mock-44",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-08-12T09:08:30.013Z",
     "location": {
       "name": "Volkshochschule Köln",
-      "address": "Musterstraße 40, Köln",
-      "lat": 50.9177437948786,
-      "lng": 6.9529021199143495
+      "address": "Musterstraße 18, Köln",
+      "lat": 50.9422748619842,
+      "lng": 6.984354935761719
     },
     "price": {
-      "amount": 10,
+      "amount": 32,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Cornelia Funke live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Ferdinand von Schirach live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-43",
-    "title": "Lesung mit Daniel Kehlmann",
-    "author": "Daniel Kehlmann",
-    "date": "2026-09-06T17:15:52.168Z",
+    "id": "mock-0",
+    "title": "Lesung mit Cornelia Funke",
+    "author": "Cornelia Funke",
+    "date": "2026-08-15T13:01:36.487Z",
     "location": {
-      "name": "Kulturhaus Frankfurt",
-      "address": "Musterstraße 88, Frankfurt",
-      "lat": 50.1226535841175,
-      "lng": 8.664387388674328
+      "name": "Volkshochschule Stuttgart",
+      "address": "Musterstraße 85, Stuttgart",
+      "lat": 48.79145745542006,
+      "lng": 9.15852853222585
+    },
+    "price": {
+      "amount": 5,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Cornelia Funke live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-41",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-08-16T21:02:57.728Z",
+    "location": {
+      "name": "Volkshochschule München",
+      "address": "Musterstraße 97, München",
+      "lat": 48.13768181823851,
+      "lng": 11.582542049702996
+    },
+    "price": {
+      "amount": 5,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Juli Zeh live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-4",
+    "title": "Lesung mit Saša Stanišić",
+    "author": "Saša Stanišić",
+    "date": "2026-08-18T12:09:27.990Z",
+    "location": {
+      "name": "Literaturhaus Köln",
+      "address": "Musterstraße 91, Köln",
+      "lat": 50.9466921420328,
+      "lng": 6.968027292694089
     },
     "price": {
       "amount": 13,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Daniel Kehlmann live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Saša Stanišić live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   },
   {
-    "id": "mock-21",
-    "title": "Lesung mit Saša Stanišić",
-    "author": "Saša Stanišić",
-    "date": "2026-09-07T05:44:54.073Z",
+    "id": "mock-30",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-08-19T19:30:14.882Z",
     "location": {
-      "name": "Volkshochschule Frankfurt",
-      "address": "Musterstraße 78, Frankfurt",
-      "lat": 50.0930227031938,
-      "lng": 8.663588435483444
+      "name": "Thalia Buchhandlung München",
+      "address": "Musterstraße 95, München",
+      "lat": 48.15868632772727,
+      "lng": 11.599847618064159
     },
     "price": {
-      "amount": 20,
+      "amount": 16,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Ferdinand von Schirach live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-37",
+    "title": "Lesung mit Ferdinand von Schirach",
+    "author": "Ferdinand von Schirach",
+    "date": "2026-08-26T15:24:45.520Z",
+    "location": {
+      "name": "Volkshochschule München",
+      "address": "Musterstraße 38, München",
+      "lat": 48.13497139834927,
+      "lng": 11.595470324476295
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Ferdinand von Schirach live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-2",
+    "title": "Lesung mit Saša Stanišić",
+    "author": "Saša Stanišić",
+    "date": "2026-08-28T14:44:42.722Z",
+    "location": {
+      "name": "Kulturhaus Frankfurt",
+      "address": "Musterstraße 91, Frankfurt",
+      "lat": 50.094727329275536,
+      "lng": 8.664590555035367
+    },
+    "price": {
+      "amount": 14,
       "currency": "EUR"
     },
     "description": "Erleben Sie Saša Stanišić live in Frankfurt. Eine spannende Lesung aus dem neuesten Werk.",
@@ -931,21 +855,97 @@
     "source": "Mock Generator"
   },
   {
-    "id": "mock-15",
-    "title": "Lesung mit Cornelia Funke",
-    "author": "Cornelia Funke",
-    "date": "2026-09-09T16:29:54.446Z",
+    "id": "mock-47",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-08-31T06:41:24.103Z",
     "location": {
-      "name": "Stadtbibliothek Dresden",
-      "address": "Musterstraße 87, Dresden",
-      "lat": 51.03227823986938,
-      "lng": 13.732161056902958
+      "name": "Stadtbibliothek Berlin",
+      "address": "Musterstraße 79, Berlin",
+      "lat": 52.49700993483928,
+      "lng": 13.38248467978182
+    },
+    "price": {
+      "amount": 29,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Sebastian Fitzek live in Berlin. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-27",
+    "title": "Lesung mit Juli Zeh",
+    "author": "Juli Zeh",
+    "date": "2026-08-31T21:06:23.571Z",
+    "location": {
+      "name": "Literaturhaus Stuttgart",
+      "address": "Musterstraße 9, Stuttgart",
+      "lat": 48.79715234681256,
+      "lng": 9.161788232907401
+    },
+    "price": {
+      "amount": 22,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Juli Zeh live in Stuttgart. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-9",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-09-02T15:13:32.936Z",
+    "location": {
+      "name": "Thalia Buchhandlung München",
+      "address": "Musterstraße 88, München",
+      "lat": 48.14837011930865,
+      "lng": 11.557813785856402
     },
     "price": {
       "amount": 7,
       "currency": "EUR"
     },
-    "description": "Erleben Sie Cornelia Funke live in Dresden. Eine spannende Lesung aus dem neuesten Werk.",
+    "description": "Erleben Sie Sebastian Fitzek live in München. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-8",
+    "title": "Lesung mit Sebastian Fitzek",
+    "author": "Sebastian Fitzek",
+    "date": "2026-09-05T00:07:37.581Z",
+    "location": {
+      "name": "Thalia Buchhandlung Köln",
+      "address": "Musterstraße 61, Köln",
+      "lat": 50.92329418953023,
+      "lng": 6.93695525950843
+    },
+    "price": {
+      "amount": 9,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Sebastian Fitzek live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
+    "url": "https://example.com",
+    "source": "Mock Generator"
+  },
+  {
+    "id": "mock-42",
+    "title": "Lesung mit Marc-Uwe Kling",
+    "author": "Marc-Uwe Kling",
+    "date": "2026-09-06T08:19:52.707Z",
+    "location": {
+      "name": "Kulturhaus Köln",
+      "address": "Musterstraße 46, Köln",
+      "lat": 50.946899643751614,
+      "lng": 6.9747926672592975
+    },
+    "price": {
+      "amount": 13,
+      "currency": "EUR"
+    },
+    "description": "Erleben Sie Marc-Uwe Kling live in Köln. Eine spannende Lesung aus dem neuesten Werk.",
     "url": "https://example.com",
     "source": "Mock Generator"
   }

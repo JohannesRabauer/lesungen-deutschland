@@ -21,7 +21,11 @@ function isNoiseTitle(title) {
  */
 export class WordPressEventsCrawler extends BaseCrawler {
   constructor(options = {}) {
-    super(options);
+    super({
+      ...options,
+      maxRetries: options.maxRetries ?? 1,
+      timeout: options.timeout ?? 10000,
+    });
   }
 
   async crawl(source) {

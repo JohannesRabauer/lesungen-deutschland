@@ -5,8 +5,10 @@ import { GenericCrawler } from './crawlers/generic.js';
 import { ThaliaCrawler } from './crawlers/thalia.js';
 import { HugendubelCrawler } from './crawlers/hugendubel.js';
 import { BibliothekCmsCrawler } from './crawlers/bibliothek-cms.js';
+import { BibliothekSpaCrawler } from './crawlers/bibliothek-spa.js';
 import { WordPressEventsCrawler } from './crawlers/wordpress-events.js';
 import { normalizeEvents, deduplicateEvents, validateEvent } from './normalize.js';
+import { filterLesungen } from './lesung-filter.js';
 import { geocodeEvents } from './geocode.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -30,6 +32,8 @@ function getCrawler(crawlerType) {
       return new HugendubelCrawler();
     case 'bibliothek-cms':
       return new BibliothekCmsCrawler();
+    case 'bibliothek-spa':
+      return new BibliothekSpaCrawler();
     case 'wordpress-events':
       return new WordPressEventsCrawler();
     case 'generic':
@@ -84,9 +88,22 @@ async function run() {
 
     console.log(`[${source.id}] Crawling ${source.name}...`);
     const crawled = await crawler.crawl(source);
+
+    // Libraries publish very mixed programmes (workshops, Führungen, Flohmärkte
+    // …). When a source opts in (default for the "library" category) we keep
+    // only events that look like author readings. Run BEFORE normalization so
+    // the classifier can still use the raw description text.
+    const onlyLesungen = source.onlyLesungen ?? source.category === 'library';
+    const filtered = onlyLesungen && Array.isArray(crawled)
+      ? filterLesungen(crawled)
+      : crawled;
+    const droppedByFilter = Array.isArray(crawled) && Array.isArray(filtered)
+      ? crawled.length - filtered.length
+      : 0;
+
     // Cap per-source volume to stay clear of systematic database extraction.
-    const rawEvents = Array.isArray(crawled)
-      ? crawled.slice(0, MAX_EVENTS_PER_SOURCE)
+    const rawEvents = Array.isArray(filtered)
+      ? filtered.slice(0, MAX_EVENTS_PER_SOURCE)
       : [];
     const elapsed = Date.now() - sourceStart;
 
@@ -94,7 +111,9 @@ async function run() {
       sourceId: source.id,
       sourceName: source.name,
       crawlerType: source.crawlerType,
+      onlyLesungen,
       eventsFound: rawEvents.length,
+      droppedByLesungFilter: droppedByFilter,
       durationMs: elapsed,
       success: rawEvents.length > 0 || crawler.getDiagnostics().errorCount === 0,
       errors: crawler.getDiagnostics().errors,

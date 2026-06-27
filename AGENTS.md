@@ -22,6 +22,9 @@ This repository is a static React application plus a small Node-based event data
 | `public/data/events.json` | Runtime dataset consumed directly by the frontend |
 | `scripts/generate-mock-data.js` | Generates 50 mock events in frontend shape |
 | `scripts/scrape.js` | Orchestrates data refresh and writes merged dataset |
+| `scripts/sources/registry.json` | Source list: each entry maps a venue to an `eventsUrl` + `crawlerType` |
+| `scripts/crawlers/*.js` | Reusable crawlers (generic, bibliothek-cms, bibliothek-spa, wordpress-events, thalia, hugendubel) |
+| `scripts/lesung-filter.js` | Reusable `isLesung()` classifier; keeps readings, drops other library events |
 | `scripts/sources/thalia.js` | Puppeteer scraper for Thalia event listings |
 | `.github/workflows/deploy.yml` | Build and GitHub Pages deployment workflow |
 | `.github/workflows/update-data.yml` | Daily data refresh and commit workflow |
@@ -84,16 +87,19 @@ must be completed before going live.
 ## How scraping and refresh work
 
 - `node scripts/generate-mock-data.js` overwrites `public/data/events.json` with 50 generated events.
-- `node scripts/scrape.js` reruns the mock generator, reads that output back in, appends Thalia results, and rewrites `public/data/events.json`.
-- `scripts/sources/thalia.js` currently parses source HTML with broad selectors and assigns approximate coordinates with random jitter.
+- `node scripts/scrape.js` loads `scripts/sources/registry.json`, runs each enabled source through the crawler named by its `crawlerType`, then normalizes, deduplicates, geocodes, and rewrites `public/data/events.json`.
+- Crawler selection lives in `getCrawler()` in `scripts/scrape.js`. Available types: `generic`, `bibliothek-cms`, `bibliothek-spa` (Puppeteer, for JS-rendered library calendars such as the ZLB Berlin), `wordpress-events`, `thalia`, `hugendubel`.
+- **Lesung filtering:** library programmes are mixed, so events from `category: "library"` sources are passed through `isLesung()` (`scripts/lesung-filter.js`) and only readings are kept. A source can opt in/out explicitly with an `onlyLesungen` boolean; the default is "on" for libraries. The filter runs before normalization so it can still read the raw description.
+- Many municipal library calendars are client-rendered or embed third-party booking systems. Such sources are added to the registry as `enabled: false` with a `note` until their event URL/crawler is confirmed; switch a source to `bibliothek-spa` when the static `bibliothek-cms` crawler returns nothing.
 - `update-data.yml` is the scheduled operational entry point for refreshing data in GitHub.
 
 If you add a new source:
 
-1. keep the output aligned to `ReadingEvent`
-2. wire it into `scripts/scrape.js`
-3. document the source and any operational caveats
-4. validate the generated JSON still works in the frontend
+1. add an entry to `scripts/sources/registry.json` (`id`, `name`, `category`, `city`, `state`, `website`, `eventsUrl`, `crawlerType`, `enabled`)
+2. reuse an existing `crawlerType`; only add a new crawler under `scripts/crawlers/` if no existing one fits, and wire it into `getCrawler()`
+3. keep crawler output aligned to the raw shape the normalizer expects (`title`, `date`, `location`, `price`, `url`, `source`, `sourceId`)
+4. document the source and any operational caveats
+5. validate the generated JSON still works in the frontend
 
 ## Commands to use
 

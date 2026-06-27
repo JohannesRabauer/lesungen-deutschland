@@ -30,7 +30,7 @@ Readers currently have to search across scattered bookseller pages, venue sites,
 | --- | --- | --- |
 | Reader | End user searching for readings and book events | Uses list, map, search, and external links |
 | Maintainer | Developer or operator maintaining data and deployment | Runs scripts, updates code, reviews GitHub Actions |
-| Source site | External event publisher such as Thalia | Provides source HTML for scraping |
+| Source site | External event publisher such as Thalia or a public library calendar | Provides source HTML for scraping |
 | GitHub Actions scheduler | Automation actor for daily refreshes | Triggers `update-data.yml` |
 | GitHub Pages | Static hosting target | Serves the built Vite app |
 
@@ -150,9 +150,9 @@ flowchart LR
 ### Data refresh workflow
 
 1. A maintainer or scheduled workflow runs `node scripts/scrape.js`.
-2. The script regenerates mock events.
-3. The script scrapes Thalia events with Puppeteer.
-4. The script merges results and writes `public/data/events.json`.
+2. The script reads `scripts/sources/registry.json` and runs each enabled source through the crawler named by its `crawlerType` (`generic`, `bibliothek-cms`, `bibliothek-spa`, `wordpress-events`, `thalia`, `hugendubel`).
+3. Events from library sources are filtered with `isLesung()` (`scripts/lesung-filter.js`) so only author readings are kept.
+4. The script normalizes, deduplicates, and geocodes results and writes `public/data/events.json`.
 5. The GitHub Actions workflow commits the updated file when it changed.
 
 ### Deployment workflow
@@ -164,6 +164,7 @@ flowchart LR
 ## Risks and constraints
 
 - The Thalia scraper is brittle because it depends on external markup.
+- Many public-library calendars are client-rendered or embed third-party booking systems, so they require the Puppeteer-based `bibliothek-spa` crawler and some yield no events from static HTML.
 - Scraped coordinates are currently approximate and not venue-accurate.
 - The dataset is intentionally mixed between mock and scraped events, which is good for UI coverage but weak for production trust.
 - Header navigation links are placeholders, so information architecture is not yet backed by routing.
@@ -188,7 +189,7 @@ flowchart LR
 
 ### Mid term
 
-1. Add additional event sources beyond Thalia.
+1. Add additional event sources beyond Thalia. *(In progress: major public libraries are registered in `scripts/sources/registry.json`; some remain `enabled: false` pending event-URL/crawler confirmation.)*
 2. Introduce source diagnostics and scraper health visibility.
 3. Add automated tests for `useEvents`, filtering, and map/list rendering.
 4. Improve dataset quality controls before committing updates.

@@ -35,8 +35,10 @@ The app helps readers discover upcoming literary events across Germany without n
 ### Data pipeline
 
 - `scripts/generate-mock-data.js` produces 50 mock reading events in the frontend data shape
-- `scripts/sources/thalia.js` scrapes Thalia event data with Puppeteer and converts it to `ReadingEvent`-like records
-- `scripts/scrape.js` runs the mock generator, appends Thalia results, and writes `public/data/events.json`
+- `scripts/sources/registry.json` lists every source (bookshops, libraries) with its `eventsUrl` and a `crawlerType`
+- `scripts/crawlers/` holds reusable crawlers selected per source: `generic` (JSON-LD/microdata/HTML), `bibliothek-cms` (German library CMS pages), `bibliothek-spa` (Puppeteer-rendered library calendars), `wordpress-events`, `thalia`, `hugendubel`
+- `scripts/lesung-filter.js` keeps only author readings (Lesungen) for library sources, dropping workshops, Führungen, Flohmärkte, etc.
+- `scripts/scrape.js` runs every enabled source through its crawler, applies the Lesung filter to library sources, normalizes, deduplicates, geocodes, and writes `public/data/events.json`
 
 ### Delivery
 

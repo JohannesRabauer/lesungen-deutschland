@@ -27,11 +27,16 @@ export interface ReadingEvent {
 }
 
 export type EventFilter = {
+    search?: string;
     author?: string;
+    audienceGroup?: string;
+    source?: string;
+    city?: string;
     maxPrice?: number;
+    freeOnly?: boolean;
     dateRange?: {
-        start: Date;
-        end: Date;
+        start: string;
+        end: string;
     };
     location?: {
         lat: number;
@@ -39,3 +44,5 @@ export type EventFilter = {
         radiusKm: number;
     };
 };
+
+export type SortOption = 'date-asc' | 'date-desc' | 'price-asc' | 'price-desc' | 'author-asc';

@@ -328,5 +328,16 @@
     "eventsUrl": "https://www.osiander.de/veranstaltungen/tuebingen",
     "crawlerType": "generic",
     "enabled": true
+  },
+  {
+    "id": "regionalbibliothek-weiden",
+    "name": "Regionalbibliothek Weiden (Stadtbücherei)",
+    "category": "library",
+    "city": "Weiden in der Oberpfalz",
+    "state": "Bayern",
+    "website": "http://www.regionalbibliothek-weiden.de",
+    "eventsUrl": "http://www.regionalbibliothek-weiden.de/events/",
+    "crawlerType": "wordpress-events",
+    "enabled": true
   }
 ]

@@ -38,11 +38,6 @@ export const STRONG_LESUNG_PATTERNS = [
  * override them.
  */
 export const SOFT_LESUNG_PATTERNS = [
-  /\bvorles/i, // Vorlesen, Vorlesestunde, Vorlesepate
-  /bilderbuchkino/i,
-  /m(ä|ae)rchen(stunde|erz(ä|ae)hl)/i,
-  /geschichten(zeit|stunde|zeit)/i,
-  /erz(ä|ae)hl(café|cafe|stunde|zeit)/i,
   /poetry\s*slam/i,
   /\blyrik\b/i,
   /\bgedichte\b/i,
@@ -57,6 +52,15 @@ export const SOFT_LESUNG_PATTERNS = [
  * Ausstellung" should stay a reading).
  */
 export const NON_LESUNG_PATTERNS = [
+  /aktuelle?\s+veranstaltungen/i,
+  /veranstaltungskalender/i,
+  /vorlesestunde/i,
+  /vorleselust/i,
+  /vorlese[\s-]?nachmittag/i,
+  /bilderbuchkino/i,
+  /m(ä|ae)rchen(stunde|erz(ä|ae)hl)/i,
+  /geschichten(zeit|stunde)/i,
+  /erz(ä|ae)hl(café|cafe|stunde|zeit)/i,
   /(bibliotheks?)?f(ü|ue)hrung/i,
   /workshop/i,
   /sprechstunde/i,

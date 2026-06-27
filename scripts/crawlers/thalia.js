@@ -46,7 +46,14 @@ export class ThaliaCrawler extends BaseCrawler {
       }
 
       // Wait for content to load
-      await page.waitForTimeout(2000);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      const blockedBySecurityCheck = await page.evaluate(() =>
+        /sicherheits-check|zusätzlicher schritt/i.test(document.body.innerText)
+      );
+      if (blockedBySecurityCheck) {
+        throw new Error('Blocked by site security check');
+      }
 
       const rawEvents = await page.evaluate(() => {
         const eventsList = [];

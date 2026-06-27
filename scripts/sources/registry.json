@@ -8,7 +8,8 @@
     "website": "https://www.thalia.de",
     "eventsUrl": "https://www.thalia.de/veranstaltung/veranstaltungskalender",
     "crawlerType": "thalia",
-    "enabled": true
+    "enabled": false,
+    "note": "Die Veranstaltungsseite liefert in der Pruefumgebung einen Sicherheits-Check statt Eventdaten. Vor dem Reaktivieren manuell pruefen."
   },
   {
     "id": "hugendubel",
@@ -19,7 +20,8 @@
     "website": "https://www.hugendubel.de",
     "eventsUrl": "https://www.hugendubel.de/de/veranstaltungen",
     "crawlerType": "hugendubel",
-    "enabled": true
+    "enabled": false,
+    "note": "Die bisherige Event-URL liefert 404. Vor dem Reaktivieren die aktuelle Veranstaltungsseite bestaetigen."
   },
   {
     "id": "osiander",
@@ -30,7 +32,8 @@
     "website": "https://www.osiander.de",
     "eventsUrl": "https://www.osiander.de/veranstaltungen",
     "crawlerType": "generic",
-    "enabled": true
+    "enabled": false,
+    "note": "Die Veranstaltungsseite leitet auf eine Marketing-/Newsletterseite um. Vor dem Reaktivieren die aktuelle Event-URL bestaetigen."
   },
   {
     "id": "dussmann",
@@ -151,7 +154,8 @@
     "website": "https://www.shakespeareand.sons",
     "eventsUrl": "https://www.shakespeareand.sons/events",
     "crawlerType": "generic",
-    "enabled": true
+    "enabled": false,
+    "note": "Die hinterlegte Domain ist derzeit nicht aufloesbar. Vor dem Reaktivieren die aktuelle Website pruefen."
   },
   {
     "id": "ocelot-berlin",

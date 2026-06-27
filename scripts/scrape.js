@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import axios from 'axios';
+import * as cheerio from 'cheerio';
 import { GenericCrawler } from './crawlers/generic.js';
 import { ThaliaCrawler } from './crawlers/thalia.js';
 import { HugendubelCrawler } from './crawlers/hugendubel.js';
@@ -10,6 +12,7 @@ import { WordPressEventsCrawler } from './crawlers/wordpress-events.js';
 import { normalizeEvents, deduplicateEvents, validateEvent } from './normalize.js';
 import { filterLesungen } from './lesung-filter.js';
 import { geocodeEvents } from './geocode.js';
+import { BOT_USER_AGENT, isAllowed } from './robots.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,6 +23,60 @@ const __dirname = path.dirname(__filename);
 // and cap how many events we take per source per run.
 const CONCURRENCY_LIMIT = 2;
 const MAX_EVENTS_PER_SOURCE = 60;
+
+function needsDetailEnrichment(rawEvent) {
+  if (!rawEvent?.url || !rawEvent?.title) return false;
+
+  const titleStartsWithDate = /^\d{1,2}\.\d{1,2}\.\d{2,4}\b/.test(rawEvent.title.trim());
+  const descriptionLooksTruncated = /…$|\.\.\.$/.test((rawEvent.description || '').trim());
+
+  return titleStartsWithDate && descriptionLooksTruncated;
+}
+
+async function enrichEventFromDetailPage(rawEvent) {
+  if (!needsDetailEnrichment(rawEvent)) {
+    return rawEvent;
+  }
+
+  if (!(await isAllowed(rawEvent.url))) {
+    return rawEvent;
+  }
+
+  try {
+    const response = await axios.get(rawEvent.url, {
+      timeout: 30000,
+      headers: {
+        'User-Agent': BOT_USER_AGENT,
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.5',
+      },
+      maxRedirects: 5,
+    });
+
+    const $ = cheerio.load(response.data);
+    const contentText = $('main, article, .content, .entry-content, .article-content, .page-content')
+      .first()
+      .text()
+      .replace(/\s+/g, ' ')
+      .trim();
+    const bodyText = $('body')
+      .text()
+      .replace(/\s+/g, ' ')
+      .trim();
+    const enrichedDescription = /(?:\bWann\b|\bAm\s+\d{1,2}\.)/i.test(bodyText) ? bodyText : contentText;
+
+    if (!enrichedDescription) {
+      return rawEvent;
+    }
+
+    return {
+      ...rawEvent,
+      description: enrichedDescription,
+    };
+  } catch {
+    return rawEvent;
+  }
+}
 
 /**
  * Instantiate the appropriate crawler for a given source.
@@ -139,6 +196,8 @@ async function run() {
       allRawEvents.push(...result.value);
     }
   }
+
+  allRawEvents = await Promise.all(allRawEvents.map((event) => enrichEventFromDetailPage(event)));
   console.log(`\nTotal raw events collected: ${allRawEvents.length}`);
 
   // 5. Normalize all events

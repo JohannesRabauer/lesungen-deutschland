@@ -1,6 +1,19 @@
 import * as cheerio from 'cheerio';
 import { BaseCrawler } from './base.js';
 
+const NOISE_TITLES = new Set([
+  'aktuelle veranstaltungen',
+  'veranstaltungen',
+  'veranstaltungskalender',
+  'programm',
+  'termine',
+  'kalender',
+]);
+
+function isNoiseTitle(title) {
+  return NOISE_TITLES.has((title || '').trim().toLowerCase());
+}
+
 /**
  * Crawler for WordPress sites using event plugins like
  * "The Events Calendar", "Events Manager", or similar.
@@ -91,7 +104,7 @@ export class WordPressEventsCrawler extends BaseCrawler {
         const $el = $(el);
         const title = $el.find('.tribe-events-calendar-list__event-title, h2, h3, .tribe-events-list-event-title')
           .first().text().trim();
-        if (!title) return;
+        if (!title || isNoiseTitle(title)) return;
 
         const dateText = $el.find('time, .tribe-event-schedule-details, .tribe-events-schedule')
           .first().attr('datetime') ||
@@ -135,7 +148,7 @@ export class WordPressEventsCrawler extends BaseCrawler {
       elements.each((_, el) => {
         const $el = $(el);
         const title = $el.find('h2, h3, .event-title, .entry-title').first().text().trim();
-        if (!title) return;
+        if (!title || isNoiseTitle(title)) return;
 
         events.push({
           title,
@@ -160,7 +173,7 @@ export class WordPressEventsCrawler extends BaseCrawler {
     $('article, .post, .entry').each((_, el) => {
       const $el = $(el);
       const title = $el.find('h2, h3, .entry-title').first().text().trim();
-      if (!title) return;
+      if (!title || isNoiseTitle(title)) return;
 
       // Check if it looks like an event (has date-like content)
       const text = $el.text();

@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import type { ReadingEvent, EventFilter, SortOption } from '../types';
 import { getUniqueValues } from '../lib/utils';
 
-const EVENTS_DATA_URL = new URL('data/events.json', import.meta.env.BASE_URL).toString();
+const EVENTS_DATA_URL = `${import.meta.env.BASE_URL}data/events.json`;
 
 export function useEvents() {
     const [events, setEvents] = useState<ReadingEvent[]>([]);

@@ -12,7 +12,12 @@ import { geocodeEvents } from './geocode.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONCURRENCY_LIMIT = 5;
+// Crawl politeness: keep per-source volume modest. Repeated, systematic
+// extraction of large parts of a source's event database can trigger the
+// sui-generis database right (UrhG sec. 87a-87e), so we limit concurrency
+// and cap how many events we take per source per run.
+const CONCURRENCY_LIMIT = 2;
+const MAX_EVENTS_PER_SOURCE = 60;
 
 /**
  * Instantiate the appropriate crawler for a given source.
@@ -78,7 +83,11 @@ async function run() {
     const sourceStart = Date.now();
 
     console.log(`[${source.id}] Crawling ${source.name}...`);
-    const rawEvents = await crawler.crawl(source);
+    const crawled = await crawler.crawl(source);
+    // Cap per-source volume to stay clear of systematic database extraction.
+    const rawEvents = Array.isArray(crawled)
+      ? crawled.slice(0, MAX_EVENTS_PER_SOURCE)
+      : [];
     const elapsed = Date.now() - sourceStart;
 
     const diag = {

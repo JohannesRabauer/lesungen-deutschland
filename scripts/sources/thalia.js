@@ -12,8 +12,8 @@ export async function scrapeThalia() {
         });
         const page = await browser.newPage();
 
-        // Set a real user agent
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+        // Honest, identifiable bot User-Agent (no browser spoofing).
+        await page.setUserAgent('LesungenDeutschlandBot/1.0 (+https://github.com/JohannesRabauer/lesungen-deutschland)');
 
         await page.goto(url, { waitUntil: 'networkidle2' });
 

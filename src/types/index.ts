@@ -14,7 +14,6 @@ export interface ReadingEvent {
         amount: number;
         currency: string;
     };
-    description?: string;
     url?: string;
     source: string;
     reader?: string; // who is reading (may differ from author of the book)

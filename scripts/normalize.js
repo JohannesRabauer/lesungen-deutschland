@@ -254,6 +254,11 @@ export function normalizeEvent(raw) {
   // Use reader as author if no explicit author provided
   const author = raw.author || reader || title;
 
+  // NOTE: We intentionally do NOT store the verbatim scraped `description`.
+  // Event blurbs can reach the (low) German threshold of originality and
+  // republishing them could infringe copyright (sec. 2 UrhG). We keep only
+  // factual fields plus a deep link to the source, and derive reader/work/
+  // audience from the text without persisting it.
   return {
     id,
     title,
@@ -270,7 +275,6 @@ export function normalizeEvent(raw) {
       amount: raw.price?.amount || 0,
       currency: raw.price?.currency || 'EUR',
     },
-    ...(description && { description }),
     ...(raw.url && { url: raw.url }),
     source: raw.source || 'unknown',
     ...(reader && { reader }),

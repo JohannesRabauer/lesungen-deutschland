@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer';
-import { BaseCrawler } from './base.js';
+import { BaseCrawler, RobotsDisallowedError } from './base.js';
+import { isAllowed } from '../robots.js';
 
 /**
  * Thalia crawler using Puppeteer for JavaScript-rendered content.
@@ -16,7 +17,11 @@ export class ThaliaCrawler extends BaseCrawler {
   async crawl(source) {
     let browser;
     try {
-      await this.rateLimit();
+      if (!(await isAllowed(source.eventsUrl))) {
+        throw new RobotsDisallowedError(source.eventsUrl);
+      }
+
+      await this.rateLimit(source.eventsUrl);
       this.diagnostics.requestCount++;
 
       browser = await puppeteer.launch({
@@ -25,7 +30,7 @@ export class ThaliaCrawler extends BaseCrawler {
       });
 
       const page = await browser.newPage();
-      await page.setUserAgent(this.getRandomUserAgent());
+      await page.setUserAgent(this.getUserAgent());
       await page.goto(source.eventsUrl, { waitUntil: 'networkidle2', timeout: this.timeout });
 
       // Handle cookie consent if present
@@ -117,6 +122,11 @@ export class ThaliaCrawler extends BaseCrawler {
       return rawEvents.map((raw) => this.mapRawEvent(raw, source));
     } catch (error) {
       if (browser) await browser.close();
+      if (error instanceof RobotsDisallowedError) {
+        console.warn(`[${source.id}] Skipped: robots.txt disallows ${error.url}`);
+        this.diagnostics.errors.push({ url: error.url, error: 'robots.txt disallow' });
+        return [];
+      }
       this.diagnostics.errorCount++;
       this.diagnostics.errors.push({ url: source.eventsUrl, error: error.message });
       console.error(`[${source.id}] Thalia crawler error: ${error.message}`);

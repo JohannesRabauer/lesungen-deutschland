@@ -1,23 +1,31 @@
 import axios from 'axios';
+import { BOT_USER_AGENT, isAllowed, getCrawlDelay } from '../robots.js';
 
-const USER_AGENTS = [
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0',
-];
+/**
+ * Raised when robots.txt disallows a URL. Callers treat this as
+ * "skip this source" rather than a hard error.
+ */
+export class RobotsDisallowedError extends Error {
+  constructor(url) {
+    super(`Disallowed by robots.txt: ${url}`);
+    this.name = 'RobotsDisallowedError';
+    this.url = url;
+  }
+}
 
 /**
  * Base crawler class providing HTTP fetch, retries, rate limiting,
- * and error handling. Subclasses must implement extractEvents(html, source).
+ * robots.txt compliance, and error handling.
+ * Subclasses must implement extractEvents(html, source).
  */
 export class BaseCrawler {
   constructor(options = {}) {
     this.maxRetries = options.maxRetries ?? 3;
     this.timeout = options.timeout ?? 30000;
     this.retryDelay = options.retryDelay ?? 2000;
-    this.rateLimitMs = options.rateLimitMs ?? 1500;
+    // Conservative default rate limit; raised vs. previous 1500ms to be a
+    // polite, low-volume crawler. Overridden upward by robots Crawl-delay.
+    this.rateLimitMs = options.rateLimitMs ?? 3000;
     this.lastRequestTime = 0;
     this.diagnostics = {
       requestCount: 0,
@@ -28,32 +36,47 @@ export class BaseCrawler {
   }
 
   /**
-   * Get a random User-Agent string.
+   * The single, honest, identifiable User-Agent used for every request.
+   * We do not rotate or spoof browser User-Agents.
    */
-  getRandomUserAgent() {
-    return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
+  getUserAgent() {
+    return BOT_USER_AGENT;
   }
 
   /**
-   * Wait to respect rate limiting.
+   * Wait to respect rate limiting. Honors a robots.txt Crawl-delay when set.
    */
-  async rateLimit() {
+  async rateLimit(url) {
+    let delayMs = this.rateLimitMs;
+    if (url) {
+      try {
+        const crawlDelay = await getCrawlDelay(url);
+        if (crawlDelay) delayMs = Math.max(delayMs, crawlDelay * 1000);
+      } catch {
+        // Ignore robots lookup issues for rate limiting.
+      }
+    }
+
     const now = Date.now();
     const elapsed = now - this.lastRequestTime;
-    if (elapsed < this.rateLimitMs) {
-      await new Promise((resolve) => setTimeout(resolve, this.rateLimitMs - elapsed));
+    if (elapsed < delayMs) {
+      await new Promise((resolve) => setTimeout(resolve, delayMs - elapsed));
     }
     this.lastRequestTime = Date.now();
   }
 
   /**
-   * Fetch a URL with retries and error handling.
+   * Fetch a URL with retries, robots.txt compliance, and error handling.
    * @param {string} url
    * @param {object} options - Axios request options override
    * @returns {Promise<string>} HTML content
    */
   async fetch(url, options = {}) {
-    await this.rateLimit();
+    if (!(await isAllowed(url))) {
+      throw new RobotsDisallowedError(url);
+    }
+
+    await this.rateLimit(url);
     this.diagnostics.requestCount++;
 
     let lastError;
@@ -62,7 +85,7 @@ export class BaseCrawler {
         const response = await axios.get(url, {
           timeout: this.timeout,
           headers: {
-            'User-Agent': this.getRandomUserAgent(),
+            'User-Agent': this.getUserAgent(),
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             'Accept-Language': 'de-DE,de;q=0.9,en;q=0.5',
             ...options.headers,
@@ -114,6 +137,11 @@ export class BaseCrawler {
       const events = await this.extractEvents(html, source);
       return events;
     } catch (error) {
+      if (error instanceof RobotsDisallowedError) {
+        console.warn(`[${source.id}] Skipped: robots.txt disallows ${error.url}`);
+        this.diagnostics.errors.push({ url: error.url, error: 'robots.txt disallow' });
+        return [];
+      }
       console.error(`[${source.id}] Crawler error: ${error.message}`);
       return [];
     }

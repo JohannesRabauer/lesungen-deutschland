@@ -40,9 +40,13 @@ The frontend expects every event to match `ReadingEvent` in `src/types/index.ts`
 - `location.lng`
 - `price.amount`
 - `price.currency`
-- optional `description`
 - optional `url`
 - `source`
+
+Note: we intentionally do **not** store a verbatim scraped `description`. Event
+blurbs can be copyrightable, so the pipeline keeps only factual fields plus a
+deep link to the source. Reader/work/audience are derived from the source text
+but the text itself is not persisted.
 
 If you change this shape, update:
 
@@ -59,6 +63,23 @@ If you change this shape, update:
 - The "In meiner Nähe" action only changes map centering today; it does not sort by distance or filter by radius.
 
 When changing the UI, preserve parity between list and map behavior unless the change is intentionally view-specific.
+
+## Crawling policy (legal hygiene)
+
+The scraper is built to be a polite, good-faith crawler under German/EU law:
+
+- **robots.txt is respected** via `scripts/robots.js` (`isAllowed`, `getCrawlDelay`).
+  Disallowed URLs are skipped, not fetched.
+- **One honest User-Agent** (`LesungenDeutschlandBot/1.0 (+repo)`) is used
+  everywhere — no rotating or spoofed browser User-Agents.
+- **Low volume:** modest concurrency, a raised rate limit, and a per-source
+  event cap (`MAX_EVENTS_PER_SOURCE` in `scripts/scrape.js`) to avoid systematic
+  database extraction.
+- **No verbatim text:** only factual fields plus a deep link are stored.
+
+The app ships an Impressum (`/impressum`) and Datenschutzerklärung
+(`/datenschutz`); operator contact details in those pages are placeholders that
+must be completed before going live.
 
 ## How scraping and refresh work
 

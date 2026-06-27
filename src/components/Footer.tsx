@@ -22,6 +22,8 @@ export function Footer() {
                             <Link to="/" className="text-sm text-gray-500 hover:text-literary-600 transition-colors">Lesungen</Link>
                             <Link to="/map" className="text-sm text-gray-500 hover:text-literary-600 transition-colors">Karte</Link>
                             <Link to="/about" className="text-sm text-gray-500 hover:text-literary-600 transition-colors">Über uns</Link>
+                            <Link to="/impressum" className="text-sm text-gray-500 hover:text-literary-600 transition-colors">Impressum</Link>
+                            <Link to="/datenschutz" className="text-sm text-gray-500 hover:text-literary-600 transition-colors">Datenschutz</Link>
                         </nav>
                     </div>
 

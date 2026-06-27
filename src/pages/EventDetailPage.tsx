@@ -115,14 +115,6 @@ export function EventDetailPage() {
                         </div>
                     </div>
 
-                    {/* Description */}
-                    {event.description && (
-                        <div className="mb-6">
-                            <h2 className="font-serif text-lg font-semibold text-gray-900 mb-2">Beschreibung</h2>
-                            <p className="text-gray-600 leading-relaxed whitespace-pre-line">{event.description}</p>
-                        </div>
-                    )}
-
                     {/* Link to source */}
                     {event.url && (
                         <a

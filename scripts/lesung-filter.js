@@ -39,6 +39,9 @@ export const STRONG_LESUNG_PATTERNS = [
  */
 export const SOFT_LESUNG_PATTERNS = [
   /\bvorles/i, // Vorlesen, Vorlesestunde, Vorlesepate
+  /b(ü|ue)cherl(ö|oe)wen/i,
+  /\b(?:lese|literatur)(?:club|klub|treff|runde)\b/i,
+  /\blesef(ö|oe)rder/i,
   /bilderbuchkino/i,
   /m(ä|ae)rchen(stunde|erz(ä|ae)hl)/i,
   /geschichten(zeit|stunde|zeit)/i,

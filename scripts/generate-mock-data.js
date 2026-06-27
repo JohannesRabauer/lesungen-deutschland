@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,7 +29,7 @@ function randomDate(start, end) {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 }
 
-function generateEvents(count) {
+export function generateMockEvents(count) {
     const events = [];
     for (let i = 0; i < count; i++) {
         const city = CITIES[Math.floor(Math.random() * CITIES.length)];
@@ -63,12 +63,18 @@ function generateEvents(count) {
     return events.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 }
 
-const events = generateEvents(50);
-const outputDir = path.join(__dirname, '../public/data');
+const isDirectExecution = process.argv[1]
+    ? import.meta.url === pathToFileURL(process.argv[1]).href
+    : false;
 
-if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+if (isDirectExecution) {
+    const events = generateMockEvents(50);
+    const outputDir = path.join(__dirname, '../public/data');
+
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(outputDir, 'events.json'), JSON.stringify(events, null, 2));
+    console.log(`Generated ${events.length} mock events in ${path.join(outputDir, 'events.json')}`);
 }
-
-fs.writeFileSync(path.join(outputDir, 'events.json'), JSON.stringify(events, null, 2));
-console.log(`Generated ${events.length} mock events in ${path.join(outputDir, 'events.json')}`);

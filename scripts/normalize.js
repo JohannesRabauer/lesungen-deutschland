@@ -1,4 +1,9 @@
 import crypto from 'crypto';
+import {
+  STRONG_LESUNG_PATTERNS,
+  SOFT_LESUNG_PATTERNS,
+  NON_LESUNG_PATTERNS,
+} from './lesung-filter.js';
 
 /**
  * German month names for date parsing.
@@ -124,6 +129,22 @@ function splitPotentialNames(segment = '') {
 function looksLikePersonList(candidate = '') {
   const names = splitPotentialNames(candidate);
   return names.length > 0 && names.join(', ') === cleanText(candidate).replace(/\s+(?:und|&)\s+/gi, ', ');
+}
+
+function anyPatternMatches(patterns, text) {
+  return patterns.some((pattern) => pattern.test(text));
+}
+
+function hasReadingSignals(text = '') {
+  const normalized = cleanText(text).toLowerCase();
+  if (!normalized) return false;
+
+  if (anyPatternMatches(STRONG_LESUNG_PATTERNS, normalized)) return true;
+
+  return (
+    anyPatternMatches(SOFT_LESUNG_PATTERNS, normalized) &&
+    !anyPatternMatches(NON_LESUNG_PATTERNS, normalized)
+  );
 }
 
 function extractNamesFromDescription(description = '') {
@@ -275,6 +296,14 @@ function extractExplicitDate(text = '') {
   const cleaned = cleanText(text);
   if (!cleaned) return '';
 
+  const combinedDateTime = cleaned.match(
+    /(\d{1,2}\.\d{1,2}\.\d{2,4}|\d{1,2}\.\s*[A-Za-zÄÖÜäöü]+\.?\s+\d{4})\s*(?:[·|–-]|\bUhrzeit\b)?\s*(\d{1,2}:\d{2})/i
+  );
+  if (combinedDateTime) {
+    const parsed = parseGermanDate(`${combinedDateTime[1]} ${combinedDateTime[2]} Uhr`);
+    if (parsed) return parsed;
+  }
+
   const candidates = [
     /\b(?:am|wann)[:\s]+(\d{1,2}\.\d{1,2}\.\d{2,4}(?:\s*(?:um)?\s*\d{1,2}(?:[:\.]\d{2})?\s*(?:Uhr|h)?)?)/i,
     /\b(?:am|wann)[:\s]+(\d{1,2}\.\s*[A-Za-zÄÖÜäöü]+\.?\s+\d{4}(?:\s*(?:um)?\s*\d{1,2}(?:[:\.]\d{2})?\s*(?:Uhr|h)?)?)/i,
@@ -417,7 +446,15 @@ function hasMeaningfulMetadata(event) {
     return true;
   }
 
-  return event.author && event.author !== event.title && looksLikePersonList(event.author);
+  if (event.author && event.author !== event.title && looksLikePersonList(event.author)) {
+    return true;
+  }
+
+  if (event.work && hasReadingSignals(`${event.title} ${event.work}`)) {
+    return true;
+  }
+
+  return hasReadingSignals(`${event.title} ${event.targetAudience?.group || ''}`);
 }
 
 /**

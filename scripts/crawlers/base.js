@@ -35,6 +35,38 @@ export class BaseCrawler {
     };
   }
 
+  isRetryableError(error) {
+    const status = error.response?.status;
+    if (status && status >= 400 && status < 500 && status !== 429) {
+      return false;
+    }
+
+    const code = error.code || '';
+    const message = error.message || '';
+    const fatalNetworkPatterns = [
+      'certificate has expired',
+      'self-signed certificate',
+      'unable to verify the first certificate',
+      'alert handshake failure',
+      'tlsv1 alert',
+      'getaddrinfo enotfound',
+      'eproto',
+      'enotfound',
+      'econnrefused',
+      'etimedout',
+    ];
+
+    if (fatalNetworkPatterns.some((pattern) => message.toLowerCase().includes(pattern))) {
+      return false;
+    }
+
+    if (['EPROTO', 'ENOTFOUND', 'ECONNREFUSED', 'ETIMEDOUT'].includes(code)) {
+      return false;
+    }
+
+    return true;
+  }
+
   /**
    * The single, honest, identifiable User-Agent used for every request.
    * We do not rotate or spoof browser User-Agents.
@@ -98,9 +130,7 @@ export class BaseCrawler {
         return response.data;
       } catch (error) {
         lastError = error;
-        const status = error.response?.status;
-        // Don't retry on 4xx errors (except 429)
-        if (status && status >= 400 && status < 500 && status !== 429) {
+        if (!this.isRetryableError(error)) {
           break;
         }
         if (attempt < this.maxRetries) {

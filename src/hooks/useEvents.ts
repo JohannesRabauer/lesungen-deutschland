@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom';
 import type { ReadingEvent, EventFilter, SortOption } from '../types';
 import { getUniqueValues } from '../lib/utils';
 
+const EVENTS_DATA_URL = new URL('data/events.json', import.meta.env.BASE_URL).toString();
+
 export function useEvents() {
     const [events, setEvents] = useState<ReadingEvent[]>([]);
     const [loading, setLoading] = useState(true);
@@ -22,7 +24,7 @@ export function useEvents() {
     const fetchEvents = useCallback(() => {
         setLoading(true);
         setError(null);
-        fetch('/data/events.json')
+        fetch(EVENTS_DATA_URL)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 return res.json();
@@ -40,7 +42,7 @@ export function useEvents() {
 
     useEffect(() => {
         // Initial data load — loading is already true from initial state
-        fetch('/data/events.json')
+        fetch(EVENTS_DATA_URL)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 return res.json();

@@ -56,7 +56,6 @@ export function generateMockEvents(count) {
                 currency: "EUR"
             },
             description: `Erleben Sie ${author} live in ${city.name}. Eine spannende Lesung aus dem neuesten Werk.`,
-            url: "https://example.com",
             source: "Mock Generator"
         });
     }

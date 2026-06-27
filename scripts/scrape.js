@@ -222,7 +222,14 @@ async function run() {
 
     // Cap per-source volume to stay clear of systematic database extraction.
     const rawEvents = Array.isArray(filtered)
-      ? filtered.slice(0, MAX_EVENTS_PER_SOURCE)
+      ? filtered
+        .slice(0, MAX_EVENTS_PER_SOURCE)
+        .map((event) => ({
+          ...event,
+          source: event.source || source.name,
+          sourceId: event.sourceId || source.id,
+          sourceCity: event.sourceCity || source.city || '',
+        }))
       : [];
     const elapsed = Date.now() - sourceStart;
 

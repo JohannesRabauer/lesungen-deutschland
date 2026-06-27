@@ -474,7 +474,7 @@ export function normalizeEvent(raw) {
 
   const author = cleanText(raw.author || extractedAuthor || reader || title);
   const locationName = cleanText(raw.location?.name || '');
-  const locationAddress = cleanText(raw.location?.address || '');
+  const locationAddress = cleanText(raw.location?.address || raw.sourceCity || '');
   const sourceName = cleanText(raw.source || 'unknown');
 
   const id = generateEventId(

@@ -2,7 +2,7 @@ name: Update Data
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Run at 2 AM UTC daily
+    - cron: '0 3 * * 0' # Run at 3 AM UTC every Sunday
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -23,8 +23,19 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
+      - name: Install Puppeteer system dependencies
+        run: npx puppeteer browsers install chrome
+
       - name: Run Scraper
         run: node scripts/scrape.js
+
+      - name: Upload diagnostics artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-diagnostics
+          path: scripts/diagnostics.json
+          retention-days: 30
 
       - name: Commit and Push changes
         run: |

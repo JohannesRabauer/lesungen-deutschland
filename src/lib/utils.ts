@@ -20,6 +20,12 @@ export function formatTime(dateStr: string): string {
   return date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
 }
 
+export function isPastEvent(dateStr: string, reference: Date = new Date()): boolean {
+  const date = new Date(dateStr);
+  if (Number.isNaN(date.getTime())) return false;
+  return date.getTime() < reference.getTime();
+}
+
 export function formatPrice(amount: number, currency: string): string {
   if (amount === 0) return 'Kostenlos';
   return new Intl.NumberFormat('de-DE', { style: 'currency', currency }).format(amount);

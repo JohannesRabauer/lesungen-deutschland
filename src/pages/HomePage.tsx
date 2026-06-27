@@ -30,7 +30,7 @@ export function HomePage() {
     const [page, setPage] = useState(1);
     const [userLocation, setUserLocation] = useState<[number, number] | undefined>(undefined);
 
-    const hasActiveFilters = Boolean(filters.search || filters.audienceGroup || filters.source || filters.freeOnly);
+    const hasActiveFilters = Boolean(filters.search || filters.audienceGroup || filters.source || filters.freeOnly || filters.showPast);
 
     const paginatedEvents = filteredEvents.slice(0, page * PAGE_SIZE);
     const hasMore = paginatedEvents.length < filteredEvents.length;
@@ -126,9 +126,11 @@ export function HomePage() {
                     activeAudience={filters.audienceGroup}
                     activeSource={filters.source}
                     freeOnly={filters.freeOnly || false}
+                    showPast={filters.showPast || false}
                     onAudienceChange={v => { setFilter('audience', v); setPage(1); }}
                     onSourceChange={v => { setFilter('source', v); setPage(1); }}
                     onFreeOnlyChange={v => { setFilter('free', v ? '1' : null); setPage(1); }}
+                    onShowPastChange={v => { setFilter('past', v ? '1' : null); setPage(1); }}
                     onClearAll={() => { clearFilters(); setPage(1); }}
                     hasActiveFilters={hasActiveFilters}
                 />

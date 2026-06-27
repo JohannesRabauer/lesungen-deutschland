@@ -7,9 +7,11 @@ interface FilterBarProps {
     activeAudience: string | undefined;
     activeSource: string | undefined;
     freeOnly: boolean;
+    showPast: boolean;
     onAudienceChange: (val: string | null) => void;
     onSourceChange: (val: string | null) => void;
     onFreeOnlyChange: (val: boolean) => void;
+    onShowPastChange: (val: boolean) => void;
     onClearAll: () => void;
     hasActiveFilters: boolean;
 }
@@ -20,9 +22,11 @@ export function FilterBar({
     activeAudience,
     activeSource,
     freeOnly,
+    showPast,
     onAudienceChange,
     onSourceChange,
     onFreeOnlyChange,
+    onShowPastChange,
     onClearAll,
     hasActiveFilters,
 }: FilterBarProps) {
@@ -77,6 +81,19 @@ export function FilterBar({
                 )}
             >
                 Kostenlos
+            </button>
+
+            {/* Show past events toggle */}
+            <button
+                onClick={() => onShowPastChange(!showPast)}
+                className={cn(
+                    'px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors',
+                    showPast
+                        ? 'border-literary-300 bg-literary-50 text-literary-700'
+                        : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                )}
+            >
+                Vergangene anzeigen
             </button>
 
             {/* Clear all */}

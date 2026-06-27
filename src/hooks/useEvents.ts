@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import type { ReadingEvent, EventFilter, SortOption } from '../types';
-import { getUniqueValues } from '../lib/utils';
+import { getUniqueValues, isPastEvent } from '../lib/utils';
 
 const EVENTS_DATA_URL = `${import.meta.env.BASE_URL}data/events.json`;
 
@@ -17,6 +17,7 @@ export function useEvents() {
         source: searchParams.get('source') || undefined,
         city: searchParams.get('city') || undefined,
         freeOnly: searchParams.get('free') === '1' || undefined,
+        showPast: searchParams.get('past') === '1' || undefined,
     }), [searchParams]);
 
     const sort: SortOption = (searchParams.get('sort') as SortOption) || 'date-asc';
@@ -60,6 +61,11 @@ export function useEvents() {
 
     const filteredEvents = useMemo(() => {
         let result = events;
+
+        if (!filters.showPast) {
+            const now = new Date();
+            result = result.filter(e => !isPastEvent(e.date, now));
+        }
 
         if (filters.search) {
             const q = filters.search.toLowerCase();

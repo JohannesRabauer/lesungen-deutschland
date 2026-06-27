@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, User, BookOpenText } from 'lucide-react';
 import type { ReadingEvent } from '../types';
-import { formatDate, formatTime } from '../lib/utils';
+import { formatDate, formatTime, isPastEvent, cn } from '../lib/utils';
 import { AudienceBadge } from './AudienceBadge';
 import { PriceBadge } from './PriceBadge';
 
@@ -12,15 +12,24 @@ interface EventCardProps {
 export function EventCard({ event }: EventCardProps) {
     const displayAuthor = event.reader || event.author;
     const displayWork = event.work || event.title;
+    const isPast = isPastEvent(event.date);
 
     return (
         <Link
             to={`/event/${event.id}`}
-            className="card group block p-0 overflow-hidden animate-fade-in"
+            className={cn(
+                'card group block p-0 overflow-hidden animate-fade-in',
+                isPast && 'opacity-60'
+            )}
         >
             <div className="p-5 sm:p-6">
                 {/* Top row: badges */}
                 <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    {isPast && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-600">
+                            Vergangen
+                        </span>
+                    )}
                     <PriceBadge amount={event.price.amount} currency={event.price.currency} />
                     {event.targetAudience?.group && (
                         <AudienceBadge group={event.targetAudience.group} ageRange={event.targetAudience.ageRange} />

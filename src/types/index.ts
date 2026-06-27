@@ -34,6 +34,7 @@ export type EventFilter = {
     city?: string;
     maxPrice?: number;
     freeOnly?: boolean;
+    showPast?: boolean;
     dateRange?: {
         start: string;
         end: string;

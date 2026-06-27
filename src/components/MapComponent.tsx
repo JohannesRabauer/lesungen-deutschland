@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import { Link } from 'react-router-dom';
 import type { ReadingEvent } from '../types';
 import { formatDate, formatTime, formatPrice } from '../lib/utils';
@@ -23,9 +23,10 @@ interface MapComponentProps {
     center?: [number, number];
     zoom?: number;
     className?: string;
+    userLocation?: [number, number];
 }
 
-export function MapComponent({ events, center = [51.1657, 10.4515], zoom = 6, className }: MapComponentProps) {
+export function MapComponent({ events, center = [51.1657, 10.4515], zoom = 6, className, userLocation }: MapComponentProps) {
     // Filter to events with valid coordinates
     const mappableEvents = events.filter(e => e.location.lat !== 0 || e.location.lng !== 0);
 
@@ -35,6 +36,17 @@ export function MapComponent({ events, center = [51.1657, 10.4515], zoom = 6, cl
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            {userLocation && (
+                <CircleMarker
+                    center={userLocation}
+                    radius={9}
+                    pathOptions={{ color: '#ffffff', weight: 2, fillColor: '#2563eb', fillOpacity: 0.9 }}
+                >
+                    <Popup>
+                        <span className="text-xs font-medium text-gray-900">Dein Standort</span>
+                    </Popup>
+                </CircleMarker>
+            )}
             {mappableEvents.map(event => (
                 <Marker key={event.id} position={[event.location.lat, event.location.lng]}>
                     <Popup>

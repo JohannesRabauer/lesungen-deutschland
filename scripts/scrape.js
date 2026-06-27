@@ -7,6 +7,7 @@ import { HugendubelCrawler } from './crawlers/hugendubel.js';
 import { BibliothekCmsCrawler } from './crawlers/bibliothek-cms.js';
 import { WordPressEventsCrawler } from './crawlers/wordpress-events.js';
 import { normalizeEvents, deduplicateEvents, validateEvent } from './normalize.js';
+import { geocodeEvents } from './geocode.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -141,6 +142,12 @@ async function run() {
 
   // Sort by date
   validEvents.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  // 7.5 Geocode events missing coordinates so they appear on the map
+  const geoStats = await geocodeEvents(validEvents);
+  console.log(
+    `Geocoding: ${geoStats.geocoded} geocoded, ${geoStats.cached} from cache, ${geoStats.failed} failed`
+  );
 
   // 8. Write output
   const outputDir = path.join(__dirname, '..', 'public', 'data');

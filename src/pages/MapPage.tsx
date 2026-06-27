@@ -66,6 +66,7 @@ export function MapPage() {
                         center={userLocation || [51.1657, 10.4515]}
                         zoom={userLocation ? 11 : 6}
                         className="z-0"
+                        userLocation={userLocation}
                     />
                 )}
             </div>

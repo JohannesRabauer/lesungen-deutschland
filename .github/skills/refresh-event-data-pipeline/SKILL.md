@@ -12,7 +12,6 @@ Use this skill when you need to refresh, diagnose, or explain the repository's e
 ## Required context
 
 - `scripts/scrape.js`
-- `scripts/generate-mock-data.js`
 - `scripts/sources/thalia.js`
 - `public/data/events.json`
 - `.github/workflows/update-data.yml`
@@ -23,7 +22,7 @@ Use this skill when you need to refresh, diagnose, or explain the repository's e
 1. Inspect the current dataset shape in `public/data/events.json` and confirm it still matches `ReadingEvent`.
 2. Run `node scripts/scrape.js` to rebuild the dataset using the current pipeline.
 3. If scraper output is unexpectedly empty, inspect `scripts/sources/thalia.js` first for selector or cookie-banner drift.
-4. Keep the merged-data contract intact: mock events may seed the file, then scraper output is appended.
+4. The dataset is built entirely from scraper output; there is no mock seed.
 5. If you change fields or source mapping, update the frontend consumers and documentation in the same change.
 6. Check `.github/workflows/update-data.yml` if the problem appears only in automation.
 

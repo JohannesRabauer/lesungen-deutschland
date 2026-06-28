@@ -7,7 +7,7 @@ This repository is a static React application plus a small Node-based event data
 - renders a Germany-wide literary event discovery UI
 - loads event data from `public/data/events.json`
 - supports list view, map view, free-text search, and geolocation-based map centering
-- refreshes data through a mock generator and a Thalia Puppeteer scraper
+- refreshes data through a Thalia Puppeteer scraper
 - deploys the static app to GitHub Pages
 
 ## Repository map
@@ -20,7 +20,6 @@ This repository is a static React application plus a small Node-based event data
 | `src/components/Header.tsx` | Top navigation shell with placeholder links |
 | `src/types/index.ts` | `ReadingEvent` and filter type definitions |
 | `public/data/events.json` | Runtime dataset consumed directly by the frontend |
-| `scripts/generate-mock-data.js` | Generates 50 mock events in frontend shape |
 | `scripts/scrape.js` | Orchestrates data refresh and writes merged dataset |
 | `scripts/sources/registry.json` | Source list: each entry maps a venue to an `eventsUrl` + `crawlerType` |
 | `scripts/crawlers/*.js` | Reusable crawlers (generic, bibliothek-cms, bibliothek-spa, wordpress-events, thalia, hugendubel) |
@@ -86,7 +85,6 @@ must be completed before going live.
 
 ## How scraping and refresh work
 
-- `node scripts/generate-mock-data.js` overwrites `public/data/events.json` with 50 generated events.
 - `node scripts/scrape.js` loads `scripts/sources/registry.json`, runs each enabled source through the crawler named by its `crawlerType`, then normalizes, deduplicates, geocodes, and rewrites `public/data/events.json`.
 - Crawler selection lives in `getCrawler()` in `scripts/scrape.js`. Available types: `generic`, `bibliothek-cms`, `bibliothek-spa` (Puppeteer, for JS-rendered library calendars such as the ZLB Berlin), `wordpress-events`, `thalia`, `hugendubel`.
 - **Lesung filtering:** library programmes are mixed, so events from `category: "library"` sources are passed through `isLesung()` (`scripts/lesung-filter.js`) and only readings are kept. A source can opt in/out explicitly with an `onlyLesungen` boolean; the default is "on" for libraries. The filter runs before normalization so it can still read the raw description.
@@ -121,7 +119,6 @@ npm run preview
 Pipeline commands:
 
 ```bash
-node scripts/generate-mock-data.js
 node scripts/scrape.js
 ```
 
@@ -176,7 +173,6 @@ At minimum, review these files after such changes:
 ## Current known limitations
 
 - approximate coordinates for scraped Thalia events
-- mixed mock and scraped dataset
 - placeholder header navigation links
 - no automated tests beyond lint/build
 - no backend or admin tooling

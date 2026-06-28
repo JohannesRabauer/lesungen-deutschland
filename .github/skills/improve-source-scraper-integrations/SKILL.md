@@ -13,7 +13,6 @@ Use this skill when extending or hardening the repository's source ingestion lay
 
 - `scripts/sources/thalia.js`
 - `scripts/scrape.js`
-- `scripts/generate-mock-data.js`
 - `src/types/index.ts`
 - `public/data/events.json`
 - `.github/workflows/update-data.yml`

@@ -77,13 +77,11 @@ flowchart LR
   Maintainer[Maintainer]
   Scheduler[GitHub Actions scheduler]
 
-  UC1[Regenerate mock events]
   UC2[Scrape Thalia events]
   UC3[Merge and publish events.json]
   UC4[Review scraper failures]
   UC5[Deploy the static app]
 
-  Maintainer --> UC1
   Maintainer --> UC2
   Maintainer --> UC3
   Maintainer --> UC4
@@ -106,10 +104,9 @@ flowchart LR
 
 ### Current operational requirements
 
-1. Maintainers must be able to regenerate mock data locally.
-2. Maintainers must be able to rebuild the merged dataset locally.
-3. The repository must support scheduled data refresh through GitHub Actions.
-4. The repository must support GitHub Pages deployment on pushes to `main`.
+1. Maintainers must be able to rebuild the dataset locally.
+2. The repository must support scheduled data refresh through GitHub Actions.
+3. The repository must support GitHub Pages deployment on pushes to `main`.
 
 ## Non-functional requirements
 
@@ -126,7 +123,7 @@ flowchart LR
 | --- | --- | --- |
 | `id` | string | Unique identifier per event record |
 | `title` | string | Event title or title-like source text |
-| `author` | string | Currently explicit for mock data; inferred from title for Thalia |
+| `author` | string | Inferred from title for Thalia |
 | `date` | ISO string | Parsed and rendered client-side |
 | `location.name` | string | Venue or location label |
 | `location.address` | string | Address or source location string |
@@ -136,7 +133,7 @@ flowchart LR
 | `price.currency` | string | Currently `EUR` |
 | `description` | string? | Optional descriptive copy |
 | `url` | string? | Optional external destination |
-| `source` | string | Data lineage marker such as `Mock Generator` or `Thalia` |
+| `source` | string | Data lineage marker such as `Thalia` |
 
 ## Current workflows
 
@@ -166,7 +163,7 @@ flowchart LR
 - The Thalia scraper is brittle because it depends on external markup.
 - Many public-library calendars are client-rendered or embed third-party booking systems, so they require the Puppeteer-based `bibliothek-spa` crawler and some yield no events from static HTML.
 - Scraped coordinates are currently approximate and not venue-accurate.
-- The dataset is intentionally mixed between mock and scraped events, which is good for UI coverage but weak for production trust.
+- The dataset is built entirely from scraped events, so coverage depends on successful scraper runs.
 - Header navigation links are placeholders, so information architecture is not yet backed by routing.
 - There is no automated test suite beyond lint/build, increasing regression risk for data-shape and UI behavior changes.
 

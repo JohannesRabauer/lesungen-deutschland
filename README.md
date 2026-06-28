@@ -1,6 +1,6 @@
 # Lesungen Deutschland
 
-Lesungen Deutschland is a Germany-wide discovery app for author readings and book events. It is a React + TypeScript + Vite frontend that renders a static dataset as a searchable list and Leaflet-based map, with the dataset refreshed from generated mock events plus scraped Thalia event data.
+Lesungen Deutschland is a Germany-wide discovery app for author readings and book events. It is a React + TypeScript + Vite frontend that renders a static dataset as a searchable list and Leaflet-based map, with the dataset refreshed from scraped event data.
 
 ## Product overview
 
@@ -34,7 +34,6 @@ The app helps readers discover upcoming literary events across Germany without n
 
 ### Data pipeline
 
-- `scripts/generate-mock-data.js` produces 50 mock reading events in the frontend data shape
 - `scripts/sources/registry.json` lists every source (bookshops, libraries) with its `eventsUrl` and a `crawlerType`
 - `scripts/crawlers/` holds reusable crawlers selected per source: `generic` (JSON-LD/microdata/HTML), `bibliothek-cms` (German library CMS pages), `bibliothek-spa` (Puppeteer-rendered library calendars), `wordpress-events`, `thalia`, `hugendubel`
 - `scripts/lesung-filter.js` keeps only author readings (Lesungen) for library sources, dropping workshops, Führungen, Flohmärkte, etc.
@@ -49,15 +48,14 @@ The app helps readers discover upcoming literary events across Germany without n
 
 ```mermaid
 flowchart LR
-  A[Mock generator] --> D[public/data/events.json]
-  B[Thalia scraper] --> D
+  B[Thalia scraper] --> D[public/data/events.json]
   D --> E[useEvents fetches /data/events.json]
   E --> F[List view in App.tsx]
   E --> G[Map view in MapComponent.tsx]
   H[User geolocation] --> G
 ```
 
-The intended dataset is a mix of generated mock events and scraped Thalia events. In practice, the committed snapshot depends on the latest scraper run and may temporarily skew toward mock data if the scraper yields no events.
+The dataset is built entirely from scraped events. The committed snapshot depends on the latest scraper run; if the scraper yields no events the dataset can be empty until the next successful run.
 
 ## Repository layout
 
@@ -69,7 +67,6 @@ The intended dataset is a mix of generated mock events and scraped Thalia events
 |-- public/
 |   `-- data/events.json
 |-- scripts/
-|   |-- generate-mock-data.js
 |   |-- scrape.js
 |   `-- sources/thalia.js
 |-- src/
@@ -111,8 +108,7 @@ Open the Vite URL shown in the terminal.
 | `npm run build` | Type-check and create a production build |
 | `npm run lint` | Run ESLint across the repository |
 | `npm run preview` | Preview the production build locally |
-| `node scripts/generate-mock-data.js` | Regenerate a mock-only `public/data/events.json` |
-| `node scripts/scrape.js` | Rebuild `public/data/events.json` from mock data plus scraper output |
+| `node scripts/scrape.js` | Rebuild `public/data/events.json` from scraper output |
 
 ## Deployment and update workflows
 
@@ -140,7 +136,6 @@ Open the Vite URL shown in the terminal.
 - The Thalia scraper is selector-sensitive and may return zero events when the source markup changes.
 - The header navigation links are placeholders (`href="#"`) rather than routed navigation.
 - The frontend consumes one static JSON file, so there is no incremental loading, faceted search, or live backend filtering.
-- The event dataset intentionally mixes synthetic mock data with scraped data, which is useful for UI coverage but not yet editorially curated.
 - There is no automated test suite beyond the existing lint/build checks.
 
 ## Suggested next improvements

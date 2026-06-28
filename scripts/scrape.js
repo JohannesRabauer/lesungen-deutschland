@@ -13,7 +13,6 @@ import { normalizeEvents, deduplicateEvents, validateEvent } from './normalize.j
 import { filterLesungen } from './lesung-filter.js';
 import { geocodeEvents } from './geocode.js';
 import { BOT_USER_AGENT, isAllowed } from './robots.js';
-import { generateMockEvents } from './generate-mock-data.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,7 +23,6 @@ const __dirname = path.dirname(__filename);
 // and cap how many events we take per source per run.
 const CONCURRENCY_LIMIT = 2;
 const MAX_EVENTS_PER_SOURCE = 60;
-const TARGET_EVENT_COUNT = 50;
 
 function flattenJsonLdNodes(node) {
   if (!node) return [];
@@ -305,13 +303,8 @@ async function run() {
     `Geocoding: ${geoStats.geocoded} geocoded, ${geoStats.cached} from cache, ${geoStats.failed} failed`
   );
 
-  const fallbackCount = Math.max(0, TARGET_EVENT_COUNT - validEvents.length);
-  const mockEvents = fallbackCount > 0 ? generateMockEvents(fallbackCount) : [];
-  const finalEvents = [...validEvents, ...mockEvents]
+  const finalEvents = [...validEvents]
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-  if (mockEvents.length > 0) {
-    console.log(`Added ${mockEvents.length} mock fallback events to keep the dataset usable`);
-  }
 
   // 8. Write output
   const outputDir = path.join(__dirname, '..', 'public', 'data');
@@ -326,7 +319,6 @@ async function run() {
   diagnostics.totalDurationMs = elapsed;
   diagnostics.totalEventsOutput = finalEvents.length;
   diagnostics.totalScrapedEventsOutput = validEvents.length;
-  diagnostics.totalMockEventsOutput = mockEvents.length;
   diagnostics.successfulSources = diagnostics.results.filter((r) => r.success).length;
   diagnostics.failedSources = diagnostics.results.filter((r) => !r.success).length;
 

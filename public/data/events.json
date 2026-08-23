@@ -20,13 +20,32 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.842Z"
+    "scrapedAt": "2026-08-23T03:22:56.210Z"
   },
   {
-    "id": "7438d2de48c567eb",
-    "title": "Bilderbuchkino",
-    "author": "Bilderbuchkino",
-    "date": "2026-08-18T16:00:00.000Z",
+    "id": "04e1b1efc3b467dc",
+    "title": "Sommerferien-Leseclub",
+    "author": "Sommerferien-Leseclub",
+    "date": "2026-08-24T16:30:00.000Z",
+    "location": {
+      "name": "Münchner Stadtbibliothek",
+      "address": "München",
+      "lat": 48.1471763,
+      "lng": 11.4615969
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.muenchner-stadtbibliothek.de/veranstaltungen/details/sommerferien-leseclub-44683",
+    "source": "Münchner Stadtbibliothek",
+    "scrapedAt": "2026-08-23T03:22:56.203Z"
+  },
+  {
+    "id": "137515a1d595529d",
+    "title": "VorLeseLust am Mittwoch",
+    "author": "VorLeseLust am Mittwoch",
+    "date": "2026-08-26T15:00:00.000Z",
     "location": {
       "name": "Leipziger Städtische Bibliotheken",
       "address": "Leipzig",
@@ -37,35 +56,12 @@
       "amount": 0,
       "currency": "EUR"
     },
-    "url": "https://stadtbibliothek.leipzig.de/veranstaltung/event/bilderbuchkino-geburtstag-nur-fuer-enten",
-    "source": "Leipziger Städtische Bibliotheken",
-    "work": "Dr. Brumm und seine Freunde",
-    "targetAudience": {
-      "ageRange": "ab 4"
-    },
-    "scrapedAt": "2026-08-16T03:22:02.835Z"
-  },
-  {
-    "id": "1b85aef296db0316",
-    "title": "VorLeseLust am Dienstag",
-    "author": "VorLeseLust am Dienstag",
-    "date": "2026-08-18T17:00:00.000Z",
-    "location": {
-      "name": "Leipziger Städtische Bibliotheken",
-      "address": "Leipzig",
-      "lat": 51.3406321,
-      "lng": 12.3747329
-    },
-    "price": {
-      "amount": 0,
-      "currency": "EUR"
-    },
-    "url": "https://stadtbibliothek.leipzig.de/veranstaltung/event/vorleselust-am-mittwoch-099330be7d-1-1",
+    "url": "https://stadtbibliothek.leipzig.de/veranstaltung/event/vorleselust-am-mittwoch-6",
     "source": "Leipziger Städtische Bibliotheken",
     "targetAudience": {
       "ageRange": "ab 4"
     },
-    "scrapedAt": "2026-08-16T03:22:02.836Z"
+    "scrapedAt": "2026-08-23T03:22:56.204Z"
   },
   {
     "id": "ae6a8000073e9bbe",
@@ -87,7 +83,7 @@
     "source": "Buchhandlung Proust",
     "reader": "Sibel Schick",
     "work": "Mein Körper, wessen Entscheidung?",
-    "scrapedAt": "2026-08-16T03:22:02.837Z"
+    "scrapedAt": "2026-08-23T03:22:56.206Z"
   },
   {
     "id": "67f661e819c6c8ae",
@@ -112,7 +108,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.837Z"
+    "scrapedAt": "2026-08-23T03:22:56.206Z"
   },
   {
     "id": "09908a7178094e24",
@@ -134,7 +130,7 @@
     "targetAudience": {
       "ageRange": "ab 4"
     },
-    "scrapedAt": "2026-08-16T03:22:02.841Z"
+    "scrapedAt": "2026-08-23T03:22:56.209Z"
   },
   {
     "id": "b0a90d6b8df727e1",
@@ -155,7 +151,51 @@
     "source": "Regionalbibliothek Weiden (Stadtbücherei)",
     "reader": "Dalal Makari",
     "work": "Auf den Wellenkräuselungen",
-    "scrapedAt": "2026-08-16T03:22:02.841Z"
+    "scrapedAt": "2026-08-23T03:22:56.209Z"
+  },
+  {
+    "id": "66e1c15441e6ebe8",
+    "title": "Vorlesestunde",
+    "author": "Vorlesestunde",
+    "date": "2026-09-10T16:00:00.000Z",
+    "location": {
+      "name": "Studio L",
+      "address": "Weiden in der Oberpfalz",
+      "lat": 49.6752749,
+      "lng": 12.1631636
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "http://www.regionalbibliothek-weiden.de/event/vorlesestunde-10/",
+    "source": "Regionalbibliothek Weiden (Stadtbücherei)",
+    "targetAudience": {
+      "ageRange": "ab 4"
+    },
+    "scrapedAt": "2026-08-23T03:22:56.209Z"
+  },
+  {
+    "id": "7b7cef8b2c26709b",
+    "title": "Vorlesestunde",
+    "author": "Vorlesestunde",
+    "date": "2026-09-17T16:00:00.000Z",
+    "location": {
+      "name": "Studio L",
+      "address": "Weiden in der Oberpfalz",
+      "lat": 49.6752749,
+      "lng": 12.1631636
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "http://www.regionalbibliothek-weiden.de/event/vorlesestunde-11/",
+    "source": "Regionalbibliothek Weiden (Stadtbücherei)",
+    "targetAudience": {
+      "ageRange": "ab 4"
+    },
+    "scrapedAt": "2026-08-23T03:22:56.210Z"
   },
   {
     "id": "3556da7444d03cae",
@@ -180,7 +220,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.838Z"
+    "scrapedAt": "2026-08-23T03:22:56.207Z"
   },
   {
     "id": "137d8935f7703ce4",
@@ -205,7 +245,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.838Z"
+    "scrapedAt": "2026-08-23T03:22:56.207Z"
   },
   {
     "id": "f7be6224423e6226",
@@ -230,7 +270,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.839Z"
+    "scrapedAt": "2026-08-23T03:22:56.207Z"
   },
   {
     "id": "3f087615989beaea",
@@ -255,7 +295,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.839Z"
+    "scrapedAt": "2026-08-23T03:22:56.208Z"
   },
   {
     "id": "cf84695ab146d7b3",
@@ -277,7 +317,7 @@
     "source": "Buchhandlung Proust",
     "reader": "Henri Hirt",
     "work": "Schreiben ist ein gutes Gefühl",
-    "scrapedAt": "2026-08-16T03:22:02.840Z"
+    "scrapedAt": "2026-08-23T03:22:56.208Z"
   },
   {
     "id": "d725bb53bd60d316",
@@ -302,6 +342,6 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-16T03:22:02.840Z"
+    "scrapedAt": "2026-08-23T03:22:56.208Z"
   }
 ]

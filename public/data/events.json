@@ -1,32 +1,9 @@
 [
   {
-    "id": "06af2215a48907da",
-    "title": "Literarischer Sommer 2026: Anne Sauer liest in der Stadtbibliothek Aachen",
-    "author": "Literarischer Sommer 2026: Anne Sauer liest in der Stadtbibliothek Aachen",
-    "date": "2026-08-06T10:43:56.000Z",
-    "location": {
-      "name": "Stadtbibliothek Aachen",
-      "address": "Aachen",
-      "lat": 50.7780139,
-      "lng": 6.0898706
-    },
-    "price": {
-      "amount": 0,
-      "currency": "EUR"
-    },
-    "url": "https://www.aachen.de/services/presse/pressemitteilungen/2026/august/060826-lesung-anne-sauer-stadtbibliothek/",
-    "source": "Stadtbibliothek Aachen",
-    "work": "Im Leben nebenan",
-    "targetAudience": {
-      "group": "Erwachsene"
-    },
-    "scrapedAt": "2026-08-23T03:22:56.210Z"
-  },
-  {
-    "id": "04e1b1efc3b467dc",
+    "id": "a86292e8743e51c8",
     "title": "Sommerferien-Leseclub",
     "author": "Sommerferien-Leseclub",
-    "date": "2026-08-24T16:30:00.000Z",
+    "date": "2026-08-31T16:00:00.000Z",
     "location": {
       "name": "Münchner Stadtbibliothek",
       "address": "München",
@@ -37,15 +14,15 @@
       "amount": 0,
       "currency": "EUR"
     },
-    "url": "https://www.muenchner-stadtbibliothek.de/veranstaltungen/details/sommerferien-leseclub-44683",
+    "url": "https://www.muenchner-stadtbibliothek.de/veranstaltungen/details/sommerferien-leseclub-44682",
     "source": "Münchner Stadtbibliothek",
-    "scrapedAt": "2026-08-23T03:22:56.203Z"
+    "scrapedAt": "2026-08-30T03:06:24.477Z"
   },
   {
-    "id": "137515a1d595529d",
-    "title": "VorLeseLust am Mittwoch",
-    "author": "VorLeseLust am Mittwoch",
-    "date": "2026-08-26T15:00:00.000Z",
+    "id": "dbcb28c11f7b4aad",
+    "title": "VorLeseLust am Montag",
+    "author": "VorLeseLust am Montag",
+    "date": "2026-08-31T16:00:00.000Z",
     "location": {
       "name": "Leipziger Städtische Bibliotheken",
       "address": "Leipzig",
@@ -56,12 +33,13 @@
       "amount": 0,
       "currency": "EUR"
     },
-    "url": "https://stadtbibliothek.leipzig.de/veranstaltung/event/vorleselust-am-mittwoch-6",
+    "url": "https://stadtbibliothek.leipzig.de/veranstaltung/event/vorleselust-am-montag-54-1",
     "source": "Leipziger Städtische Bibliotheken",
+    "work": "Erich Loest",
     "targetAudience": {
-      "ageRange": "ab 4"
+      "ageRange": "ab 3"
     },
-    "scrapedAt": "2026-08-23T03:22:56.204Z"
+    "scrapedAt": "2026-08-30T03:06:24.478Z"
   },
   {
     "id": "ae6a8000073e9bbe",
@@ -83,7 +61,30 @@
     "source": "Buchhandlung Proust",
     "reader": "Sibel Schick",
     "work": "Mein Körper, wessen Entscheidung?",
-    "scrapedAt": "2026-08-23T03:22:56.206Z"
+    "scrapedAt": "2026-08-30T03:06:24.479Z"
+  },
+  {
+    "id": "8cc14b6bf44e9d3d",
+    "title": "Bilderbuchkino",
+    "author": "Bilderbuchkino",
+    "date": "2026-09-01T16:00:00.000Z",
+    "location": {
+      "name": "Leipziger Städtische Bibliotheken",
+      "address": "Leipzig",
+      "lat": 51.3406321,
+      "lng": 12.3747329
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://stadtbibliothek.leipzig.de/veranstaltung/event/der-raeuber-hotzenplotz-und-die-mondrakete",
+    "source": "Leipziger Städtische Bibliotheken",
+    "work": "Lima und die Zauberfeder",
+    "targetAudience": {
+      "ageRange": "ab 3"
+    },
+    "scrapedAt": "2026-08-30T03:06:24.478Z"
   },
   {
     "id": "67f661e819c6c8ae",
@@ -108,7 +109,27 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-23T03:22:56.206Z"
+    "scrapedAt": "2026-08-30T03:06:24.479Z"
+  },
+  {
+    "id": "e40fe94459b986fc",
+    "title": "Buchpremiere mit Rebecca Martin",
+    "author": "Rebecca Martin",
+    "date": "2026-09-02T19:00:00.000Z",
+    "location": {
+      "name": "KulturBühne",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Buchpremiere-mit-Rebecca-Martin/Buchpremiere-mit-Rebecca-Martin",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Rebecca Martin",
+    "scrapedAt": "2026-08-30T03:06:24.474Z"
   },
   {
     "id": "09908a7178094e24",
@@ -130,7 +151,7 @@
     "targetAudience": {
       "ageRange": "ab 4"
     },
-    "scrapedAt": "2026-08-23T03:22:56.209Z"
+    "scrapedAt": "2026-08-30T03:06:24.481Z"
   },
   {
     "id": "b0a90d6b8df727e1",
@@ -151,7 +172,131 @@
     "source": "Regionalbibliothek Weiden (Stadtbücherei)",
     "reader": "Dalal Makari",
     "work": "Auf den Wellenkräuselungen",
-    "scrapedAt": "2026-08-23T03:22:56.209Z"
+    "scrapedAt": "2026-08-30T03:06:24.481Z"
+  },
+  {
+    "id": "d0bd12b258b325a5",
+    "title": "Verkostung mit ODE/The Natural Aperitif",
+    "author": "The Natural Aperitif",
+    "date": "2026-09-04T13:00:00.000Z",
+    "endDate": "2026-09-04T18:00:00.000Z",
+    "location": {
+      "name": "EG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Verkostung-mit-ODE-The-Natural-Aperetif2026/Verkostung-mit-ODEThe-Natural-Aperitif",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "The Natural Aperitif",
+    "scrapedAt": "2026-08-30T03:06:24.475Z"
+  },
+  {
+    "id": "465e65a0f1b1fde2",
+    "title": "AUSVERKAUFT // Buchpremiere mit Frauke Brosius-Gersdorf",
+    "author": "Frauke Brosius",
+    "date": "2026-09-04T19:00:00.000Z",
+    "location": {
+      "name": "KulturBühne",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Buchpremiere-mit-Frauke-Brosius-Gersdorf/AUSVERKAUFT--Buchpremiere-mit-Frauke-BrosiusGersdorf",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Frauke Brosius",
+    "scrapedAt": "2026-08-30T03:06:24.475Z"
+  },
+  {
+    "id": "c38127a0b9a98196",
+    "title": "Treffpunkt ChorKultur - Stimmbildung",
+    "author": "Treffpunkt ChorKultur",
+    "date": "2026-09-04T19:00:00.000Z",
+    "location": {
+      "name": "UG, MusikLounge",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Treffpunkt-ChorKultur-09.2026/Treffpunkt-ChorKultur--Stimmbildung",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Treffpunkt ChorKultur",
+    "work": "Stimmbildung",
+    "scrapedAt": "2026-08-30T03:06:24.475Z"
+  },
+  {
+    "id": "d2a37170f0179744",
+    "title": "Verkostung mit ODE/The Natural Aperitif",
+    "author": "The Natural Aperitif",
+    "date": "2026-09-05T13:00:00.000Z",
+    "endDate": "2026-09-05T18:00:00.000Z",
+    "location": {
+      "name": "EG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Verkostung-mit-ODE-The-Natural-Aperetif2026.2/Verkostung-mit-ODEThe-Natural-Aperitif",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "The Natural Aperitif",
+    "scrapedAt": "2026-08-30T03:06:24.476Z"
+  },
+  {
+    "id": "2b633062b732fad5",
+    "title": "Verkostung mit Popkornditorei Knalle",
+    "author": "Popkornditorei Knalle",
+    "date": "2026-09-08T00:00:00.000Z",
+    "endDate": "2026-09-12T00:00:00.000Z",
+    "location": {
+      "name": "EG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Verkostung-mit-Popkornditorei-Knalle.2026/Verkostung-mit-Popkornditorei-Knalle",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Popkornditorei Knalle",
+    "scrapedAt": "2026-08-30T03:06:24.476Z"
+  },
+  {
+    "id": "7a2fbc1b1f354667",
+    "title": "Buchvorstellung mit Matthias Wissmann & Dr. Martin Grosch",
+    "author": "Matthias Wissmann, Dr. Martin Grosch",
+    "date": "2026-09-08T18:00:00.000Z",
+    "location": {
+      "name": "KulturBühne",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Buchvorstellung-mit-Matthias-Wissmann--Dr.-Martin-Grosch/Buchvorstellung-mit-Matthias-Wissmann--Dr-Martin-Grosch",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Matthias Wissmann, Dr. Martin Grosch",
+    "scrapedAt": "2026-08-30T03:06:24.476Z"
   },
   {
     "id": "66e1c15441e6ebe8",
@@ -173,7 +318,68 @@
     "targetAudience": {
       "ageRange": "ab 4"
     },
-    "scrapedAt": "2026-08-23T03:22:56.209Z"
+    "scrapedAt": "2026-08-30T03:06:24.481Z"
+  },
+  {
+    "id": "74541ec4a341d119",
+    "title": "Listening Session mit Rayannah und Sam Mallais, in Kooperation mit Better Things",
+    "author": "Sam Mallais",
+    "date": "2026-09-10T18:00:00.000Z",
+    "location": {
+      "name": "CD Abteilung UG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Listening-Session-mit-Rayannah-und-Sam-Mallais/Listening-Session-mit-Rayannah-und-Sam-Mallais-in-Kooperation-mit-Better-Things-",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Sam Mallais",
+    "scrapedAt": "2026-08-30T03:06:24.476Z"
+  },
+  {
+    "id": "a605d5e151827ecb",
+    "title": "AUSVERKAUFT // Buchvorstellung mit Sven Regener",
+    "author": "Sven Regener",
+    "date": "2026-09-14T19:00:00.000Z",
+    "location": {
+      "name": "KulturBühne",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Buchvorstellung-mit-Sven-Regener/AUSVERKAUFT--Buchvorstellung-mit-Sven-Regener",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Sven Regener",
+    "scrapedAt": "2026-08-30T03:06:24.476Z"
+  },
+  {
+    "id": "72172c6f01f71c4f",
+    "title": "Verkostung mit Popkornditorei Knalle",
+    "author": "Popkornditorei Knalle",
+    "date": "2026-09-15T00:00:00.000Z",
+    "endDate": "2026-09-19T00:00:00.000Z",
+    "location": {
+      "name": "EG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Verkostung-mit-Popkornditorei-Knalle.2026.2/Verkostung-mit-Popkornditorei-Knalle",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Popkornditorei Knalle",
+    "scrapedAt": "2026-08-30T03:06:24.476Z"
   },
   {
     "id": "7b7cef8b2c26709b",
@@ -195,7 +401,86 @@
     "targetAudience": {
       "ageRange": "ab 4"
     },
-    "scrapedAt": "2026-08-23T03:22:56.210Z"
+    "scrapedAt": "2026-08-30T03:06:24.481Z"
+  },
+  {
+    "id": "176c04fc3795b25a",
+    "title": "Verkostung mit Sawade Berlin",
+    "author": "Sawade Berlin",
+    "date": "2026-09-18T10:00:00.000Z",
+    "location": {
+      "name": "EG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/-Verkostung--mit-Sawade-Berlin---2026/Verkostung--mit-Sawade-Berlin",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Sawade Berlin",
+    "scrapedAt": "2026-08-30T03:06:24.477Z"
+  },
+  {
+    "id": "fcf884929ce075b3",
+    "title": "Bücherlöwen",
+    "author": "Bücherlöwen",
+    "date": "2026-09-18T14:30:00.000Z",
+    "location": {
+      "name": "Studio L",
+      "address": "Weiden in der Oberpfalz",
+      "lat": 49.6752749,
+      "lng": 12.1631636
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "http://www.regionalbibliothek-weiden.de/event/buecherloewen/",
+    "source": "Regionalbibliothek Weiden (Stadtbücherei)",
+    "scrapedAt": "2026-08-30T03:06:24.481Z"
+  },
+  {
+    "id": "ea40a34689668fee",
+    "title": "Buchvorstellung mit Kathinka Engel",
+    "author": "Kathinka Engel",
+    "date": "2026-09-18T19:00:00.000Z",
+    "location": {
+      "name": "KulturBühne",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/Buchvorstellung-mit-Kathinka-Engel/Buchvorstellung-mit-Kathinka-Engel",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Kathinka Engel",
+    "scrapedAt": "2026-08-30T03:06:24.477Z"
+  },
+  {
+    "id": "1294e369a38f0690",
+    "title": "Verkostung mit Sawade Berlin",
+    "author": "Sawade Berlin",
+    "date": "2026-09-19T10:00:00.000Z",
+    "location": {
+      "name": "EG",
+      "address": "Friedrichstr. 90, 10117, Berlin",
+      "lat": 52.518369,
+      "lng": 13.3890173
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "https://www.kulturkaufhaus.de/de/veranstaltungen/detail/-Verkostung--mit-Sawade-Berlin---2026.2/Verkostung--mit-Sawade-Berlin",
+    "source": "Dussmann das KulturKaufhaus",
+    "reader": "Sawade Berlin",
+    "scrapedAt": "2026-08-30T03:06:24.477Z"
   },
   {
     "id": "3556da7444d03cae",
@@ -220,7 +505,29 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-23T03:22:56.207Z"
+    "scrapedAt": "2026-08-30T03:06:24.480Z"
+  },
+  {
+    "id": "8dbd0d7964ff5499",
+    "title": "Vorlesestunde",
+    "author": "Vorlesestunde",
+    "date": "2026-09-24T16:00:00.000Z",
+    "location": {
+      "name": "Studio L",
+      "address": "Weiden in der Oberpfalz",
+      "lat": 49.6752749,
+      "lng": 12.1631636
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "url": "http://www.regionalbibliothek-weiden.de/event/vorlesestunde-12/",
+    "source": "Regionalbibliothek Weiden (Stadtbücherei)",
+    "targetAudience": {
+      "ageRange": "ab 4"
+    },
+    "scrapedAt": "2026-08-30T03:06:24.482Z"
   },
   {
     "id": "137d8935f7703ce4",
@@ -245,7 +552,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-23T03:22:56.207Z"
+    "scrapedAt": "2026-08-30T03:06:24.480Z"
   },
   {
     "id": "f7be6224423e6226",
@@ -270,7 +577,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-23T03:22:56.207Z"
+    "scrapedAt": "2026-08-30T03:06:24.480Z"
   },
   {
     "id": "3f087615989beaea",
@@ -295,7 +602,7 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-23T03:22:56.208Z"
+    "scrapedAt": "2026-08-30T03:06:24.480Z"
   },
   {
     "id": "cf84695ab146d7b3",
@@ -317,7 +624,7 @@
     "source": "Buchhandlung Proust",
     "reader": "Henri Hirt",
     "work": "Schreiben ist ein gutes Gefühl",
-    "scrapedAt": "2026-08-23T03:22:56.208Z"
+    "scrapedAt": "2026-08-30T03:06:24.480Z"
   },
   {
     "id": "d725bb53bd60d316",
@@ -342,6 +649,6 @@
     "targetAudience": {
       "group": "Erwachsene"
     },
-    "scrapedAt": "2026-08-23T03:22:56.208Z"
+    "scrapedAt": "2026-08-30T03:06:24.481Z"
   }
 ]
